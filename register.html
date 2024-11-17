@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+        <title>PythoMy Registration Page</title>
+  <link href="fonts/material_icons/material-icons.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+</head>
+
+<body>
+  <div class="section"></div>
+  <main>
+    <center>
+      <div class="section"></div>
+ 
+      <div class="container">
+        <div class="row">
+        <div class="z-depth-1 white lighten-4  col s12 m6 l12" style="border-radius: 12px;">
+          <div class="row" id="mainform">
+
+              <img class="responsive-img" style="width: 100px;" src="images/PythoMy Logo.png" />
+
+              <h6 style="color:#666666;">Please type in your registration details.</h6>
+              <div class="row">
+                  <div class="col s12">
+                    <div class='input-field col s10 offset-s1'>
+                      <i class="material-icons prefix">person</i>
+                      <input class='validate' type='text' name='username' required id='firstname' />
+                      <label for='firstname'>First Name<sup>*</sup></label>
+                    </div>
+                    <div class='input-field col s10 offset-s1'>
+                      <i class="material-icons prefix">person</i>
+                      <input class='validate' type='text' name='password' required id="lastname" />
+                      <label for='lastname'>Last Name<sup>*</sup></label>
+                    </div>
+                    <div class='input-field col s10 offset-s1'>
+                      <i class="material-icons prefix">mail</i>
+                      <input class='validate' type='email' name='password' required id="email" />
+                      <label for='email'>E-mail Address<sup>*</sup></label>
+                    </div>
+                    <div class='input-field col s10 offset-s1'>
+                      <i class="material-icons prefix">phone_android</i>
+                      <input class='validate' type='text' name='password' id="phone" />
+                      <label for='phone'>Mobile Phone Number</label>
+                    </div>
+                    <div class='input-field col s10 offset-s1'>
+                      <i class="material-icons prefix">account_box</i>
+                      <input class='validate' type='text' name='username' required id='username' />
+                      <label for='username'>Username<sup>*</sup></label>
+                    </div>
+                    <div class='input-field col s10 offset-s1'>
+                      <i class="material-icons prefix">lock</i>
+                      <input class='validate' type='password' name='password' required id="password" />
+                      <label for='lastname'>Password<sup>*</sup></label>
+                    </div>
+                    <div class='input-field col s10 offset-s1'>
+                      <i class="material-icons prefix">lock</i>
+                      <input class='validate' type='password' name='password' required id="confirm_pass" />
+                      <label for='email'>Confirm Password<sup>*</sup></label>
+                    </div>
+                    <div class='input-field col s10 offset-s1'>
+                      <select id="role">
+                        <option value="" disabled selected>What's your role in the application?<sup>*</sup></option>
+                        <option value="User">User</option>
+                        <option value="Expert (Pending)">Expert</option>
+                      </select>
+                    </div>
+                    <div class='input-field col s10 offset-s1'>
+                      <label>
+                        <input type="checkbox" value="1" id="agree"/>
+                        <span>I agree to the Terms and Conditions<sup>*</sup></span>
+                      </label><br>
+                    </div>
+                  </div>
+              </div>
+              
+              <div class='row col s10 offset-s1'>
+            <center>
+                <button  id="btn-login" name='btn-login' class='col s12 btn btn-large waves-effect darken-3' style="background-color: #0fbcf9!important;" onclick="register()">Register</button>
+            </center>
+              </div>
+          </div>
+        </div>
+        </div>
+      </div>
+      
+    </center>
+     <!-- Modal Structure -->
+      <div id="pictureModal" class="modal">
+        <div class="modal-content">
+          <h4>Upload Credentials</h4>
+          <center>
+            <img width="500px" height="200px" id="image">
+          </center>
+          <input type="file" id="credentialImg">
+          <center>
+            <button  id="btn-login" name='btn-login' class='col s12 btn btn-large waves-effect darken-3' style="background-color: #0fbcf9!important;" onclick="uploadImg()">Upload</button>
+          </center>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('select').formSelect();
+      $(".modal").modal();
+    });
+  </script>
+  <script type="text/javascript">
+    base64img = "";
+    $("#firstname").val("");
+    $("#lastname").val("");
+    $("#email").val("");
+    $("#phone").val("");
+    $("#username").val("");
+    $("#password").val("");
+    $("#confirm_pass").val("");
+    $("#agree:checked").val("");
+
+    function readFile() {
+      if (this.files && this.files[0]) {
+        var FR = new FileReader();
+        FR.addEventListener("load", function (e) {
+          base64img = e.target.result;
+          document.getElementById("image").src = base64img;
+          localStorage.setItem("b64",base64img);
+        });
+        FR.readAsDataURL(this.files[0]);
+
+      }
+      
+    }
+
+    try {
+      document.getElementById("credentialImg").addEventListener("change", readFile);
+    } catch (err) {}
+    function uploadImg(){
+      data = JSON.stringify({
+        fld_userid:parseInt(localStorage.getItem("imageid")),
+        fld_image:localStorage.getItem("b64")
+      });
+      $.post("https://www.gcccsbsit.xyz/_pythomy/insertimg.php",data,function(data){
+        if (data.status == "Created") {
+          if (sessionStorage.getItem("result")) {
+            if (sessionStorage.getItem("result") == "OK") {
+              correct = JSON.stringify({
+                cid:data.id,
+                lid:1
+              });
+              $.post("https://www.gcccsbsit.xyz/_pythomy/check.php",correct,function(data){
+                if (data.status == "OK") {
+                  window.alert("Registered and credential successfully uploaded. You have now passed Python Syntax (Simple Statements). You can now proceed to Indentations (Simple Statements). Kindly log in your account to proceed.");
+                  sessionStorage.removeItem("result");
+                }
+              }); 
+              
+            }
+          } else {
+            window.alert("Registered and credential successfully uploaded.");
+            localStorage.removeItem("imageid");
+          }
+        }
+      });
+    }
+    function register() {
+      firstname = $("#firstname").val();
+      lastname = $("#lastname").val();
+      email = $("#email").val();
+      phone = $("#phone").val();
+      username = $("#username").val();
+      password = $("#password").val();
+      role = $("#role").val();
+      confirm_pass = $("#confirm_pass").val();
+      agree = $("#agree:checked").val();
+      if (firstname != "" && lastname != "" && email != "" && username != "" && password != "" && role && confirm_pass != "" && agree != "") {
+        if (agree == "1" && password == confirm_pass) {
+          $.post("https://www.gcccsbsit.xyz/_pythomy/insert.php",JSON.stringify({fld_lastname:lastname,fld_firstname:firstname,fld_email:email,fld_phone:phone,fld_role:role,fld_username:username,fld_password:password}),function(data){
+            console.log(data);
+              if (data.status == "Created") {
+                if (role == "User") {
+                  if (sessionStorage.getItem("result")) {
+                    if (sessionStorage.getItem("result") == "OK") {
+                      correct = JSON.stringify({
+                        cid:data.id,
+                        lid:1
+                      });
+                      $.post("https://www.gcccsbsit.xyz/_pythomy/check.php",correct,function(data){
+                        if (data.status == "OK") {
+                          window.alert("Registered. You have now passed Python Syntax (Simple Statements). You can now proceed to Indentations (Simple Statements). Kindly log in your account to proceed.");
+                          sessionStorage.removeItem("result");
+                        }
+                      }); 
+                    }
+                  } else {
+                    window.alert("Registered.");
+                  }
+                }
+                else if (role == "Expert (Pending)") {
+                  $("#pictureModal").modal("open");
+                  localStorage.setItem("imageid",data.id);
+                }
+              }
+          });
+        } else {
+          window.alert("Something went wrong. Please try again.");
+        }
+      } else {
+        window.alert("Please fill up ALL REQUIRED (*) fields. Thank you.");
+      }
+    }
+  </script>
+</body>
+
+</html>

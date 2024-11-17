@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+        <title>Help Users</title>
+        <link href="fonts/material_icons/material-icons.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+        <link rel="stylesheet" type="text/css" href="css/commons.css">
+</head>
+
+<body>
+  <nav class="nav-extended">
+    <ul id="dropdown1" class="dropdown-content">
+      <li id="name"></li>
+      <li class="divider"></li>
+      <li><a href="privatecomments.html">Help Users</a></li>
+      <li class="divider"></li>
+      <li><a href="convos.html">Conversations with Users</a></li>
+      <li class="divider"></li>
+      <li><a data-target="msgs" class="modal-trigger">Feedbacks & Concerns</a></li>
+      <li class="divider"></li>
+      <li><a href="javascript:logout()">Logout</a></li>
+    </ul>
+    <ul id="dropdown_lessons" class="dropdown-content">
+      <li><p style="color:black; padding: 0 20px;"><b>Simple Statements</b></p></li>
+      <li><a href="python.html">What is Python?</a></li>
+      <li><a href="simplestatements.html">Python Syntax</a></li>
+      <li><a href="indentations.html">Indentations</a></li>
+      <li class="divider"></li>
+      <li><p style="color:black; padding: 0 20px;"><b>Variables</b></p></li>
+      <li><a href="variables.html">Variables</a></li>
+      <li><a href="casting.html">Casting</a></li>
+      <li class="divider"></li>
+      <li><p style="color:black; padding: 0 20px;"><b>Data Types</b></p></li>
+      <li><a href="numbers.html">Numbers</a></li>
+      <li><a href="strings.html">Strings</a></li>
+      <li class="divider"></li>
+      <li><p style="color:black; padding: 0 20px;"><b>Operators</b></p></li>
+      <li><a href="arithmetic.html">Arithmetic</a></li>
+      <li><a href="assignment.html">Assignment</a></li>
+      <li><a href="comparison.html">Comparison</a></li>
+      <li><a href="logical.html">Logical</a></li>
+      <li><a href="membership.html">Membership</a></li>
+      <li class="divider"></li>
+      <li><p style="color:black; padding: 0 20px;"><b>Conditional Statements</b></p></li>
+      <li><a href="if.html">if</a></li>
+      <li><a href="elif.html">elif</a></li>
+      <li><a href="else.html">else</a></li>
+      <li class="divider"></li>
+      <li><p style="color:black; padding: 0 20px;"><b>Collections</b></p></li>
+      <li><a href="lists.html">Lists</a></li>
+      <li class="divider"></li>
+      <li><p style="color:black; padding: 0 20px;"><b>Looping Statements</b></p></li>
+      <li><a href="while.html">while</a></li>
+      <li><a id="forItem" href="javascript:cantGoHere()">for</a></li>
+    </ul>
+    <div class="nav-wrapper">
+      
+      <a id="logo-container" href="#loginmodal" class="brand-logo modal-trigger">
+        <div class="row">
+            <div class="col s1"><img src="images/landing_images/PythoMy Logo.png" width="60" height="60"></div>
+            <div class="col s1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PythoMy</div>
+        </div></a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a class="dropdown-trigger" href="#!" data-target="dropdown_lessons">My Lessons<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a class="dropdown-trigger" href="#!" data-target="dropdown1"  id="username"><i class="material-icons right">arrow_drop_down</i></a></li>
+      </ul>
+    </div>
+    
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+        <center>
+          <li id="name-side"></li>
+          <li id="username-side"></li>
+        </center>
+        <li><p style="color:black; padding: 0 20px;"><b>Simple Statements</b></p></li>
+        <li><a href="python.html">What is Python?</a></li>
+        <li><a href="simplestatements.html">Python Syntax</a></li>
+        <li><a href="indentations.html">Indentations</a></li>
+        <li class="divider"></li>
+        <li><p style="color:black; padding: 0 20px;"><b>Variables</b></p></li>
+        <li><a href="variables.html">Variables</a></li>
+        <li><a href="casting.html">Casting</a></li>
+        <li class="divider"></li>
+        <li><p style="color:black; padding: 0 20px;"><b>Data Types</b></p></li>
+        <li><a href="numbers.html">Numbers</a></li>
+        <li><a href="strings.html">Strings</a></li>
+        <li class="divider"></li>
+        <li><p style="color:black; padding: 0 20px;"><b>Operators</b></p></li>
+        <li><a href="arithmetic.html">Arithmetic</a></li>
+        <li><a href="assignment.html">Assignment</a></li>
+        <li><a href="comparison.html">Comparison</a></li>
+        <li><a href="logical.html">Logical</a></li>
+        <li><a href="membership.html">Membership</a></li>
+        <li class="divider"></li>
+        <li><p style="color:black; padding: 0 20px;"><b>Conditional Statements</b></p></li>
+        <li><a href="if.html">if</a></li>
+        <li><a href="elif.html">elif</a></li>
+        <li><a href="else.html">else</a></li>
+        <li class="divider"></li>
+        <li><p style="color:black; padding: 0 20px;"><b>Collections</b></p></li>
+        <li><a href="lists.html">Lists</a></li>
+        <li class="divider"></li>
+        <li><p style="color:black; padding: 0 20px;"><b>Looping Statements</b></p></li>
+        <li><a href="while.html">while</a></li>
+        <li><a id="forItem-side" href="javascript:cantGoHere()">for</a></li>
+        <li class="divider"></li>
+        <li><a href="experthelp.html">Expert Help</a></li>
+        <li class="divider"></li>
+        <li><a data-target="msgs" class="modal-trigger">Feedbacks & Concerns</a></li>
+        <li class="divider"></li>
+        <li><a href="javascript:logout()">Logout</a></li>
+  </ul>
+
+
+  <div class="section">
+    <div class="container">
+      <h3>Private Comments from Users</h3>
+      <div class="card">
+        <ul style="list-style-type: none;" id="experts">
+          
+        </ul>
+      </div>
+    </div>
+    <!-- Modal Structure -->
+     <div id="msgs" class="modal">
+        <div class="modal-content">
+          <h5>Message to the Developer/Administrator</h5>
+          <div class="row">
+            <div class="col s12">
+              <textarea wrap="hard" id="myMsg" class="materialize-textarea"></textarea>
+              <a class="btn waves-effect waves-light btn-large" onclick="sendMessage()">Send</a>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+      </div>
+      <div id="messages" class="modal">
+        <div class="modal-content">
+          <h4>Conversation</h4>
+          <ul id="privateMessages" style="list-style-type:none">
+            
+          </ul>
+
+          <h5>Your Message</h5>
+          <div class="row">
+            <div class="col s12">
+              <textarea wrap="hard" id="myMessage" class="materialize-textarea"></textarea>
+              <a class="btn waves-effect waves-light btn-large" onclick="postMessage()">Send Message</a>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+      </div>
+  </div>
+
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.sidenav').sidenav();
+      $(".dropdown-trigger").dropdown();
+      $("#username").html(sessionStorage.getItem("username") + "<i class='material-icons right'>arrow_drop_down</i>");
+      $("#username-side").html(sessionStorage.getItem("username"));
+      $("#name").html("<a style='color:black;'><b>" + sessionStorage.getItem("name") + "<b></a>");
+      $("#name-side").html("<b>" + sessionStorage.getItem("name") + "<b>");
+      $(".modal").modal();
+    });
+  </script>
+  <script type="text/javascript">
+    function showPrivates() {
+      $.getJSON("https://pythomyapplication.000webhostapp.com/_pythomy/privates.php",function(data){
+        $("#experts").empty();
+        for (i = 0; i < data.length; i++) {
+          $("#experts").append("<li style='text-decoration:none; color:black; cursor:pointer;' onclick='message(" + data[i].fld_id +")'>" + "<h6><b>" + data[i].fld_firstname + " " + data[i].fld_lastname + " (" + data[i].fld_username + ")</b></h6><p><b>" + data[i].fld_lesson + "</b></p><p><b>" + data[i].fld_timestamp + "</b></p><p>" + data[i].fld_comment +"</p></li>" + "<div class='divider'></div>");
+        }
+      });
+    }
+    showPrivates();
+    setInterval(() => {
+      showPrivates();
+    },1000);
+    function message(id) {
+      loadMessages(id);
+      sessionStorage.setItem("kausap",id);
+      $("#messages").modal("open");
+    }
+    function loadMessages(id) {
+      $("#privateMessages").empty();
+      $.getJSON("https://pythomyapplication.000webhostapp.com/_pythomy/selchats.php?from=" + id + "&to=" + parseInt(sessionStorage.getItem("id")),function(data){
+        for (i = 0; i < data.length; i++) {
+          $("#privateMessages").append("<li>" + "<h6><b>" + data[i].fld_firstname + " " + data[i].fld_lastname + "</b></h6>" + "<h6><b>" + data[i].fld_timestamp + "</b></h6>" + "<p>" + data[i].fld_message + "</p>" + "</li>" + "<div class='divider'></div>");
+        }
+      });
+    }
+    function postMessage() {
+      data = JSON.stringify({
+        fld_from: parseInt(sessionStorage.getItem("id")),
+        fld_to: parseInt(sessionStorage.getItem("kausap")),
+        fld_message: $("#myMessage").val()
+      });
+      if ($("#myMessage").val() != "") {
+        $.post("https://pythomyapplication.000webhostapp.com/_pythomy/sendchat.php",data,function(data){
+          if (data.status == "Created") {
+            $("#privateMessages").empty();
+            $("#myMessage").val("");
+            loadMessages(parseInt(sessionStorage.getItem("kausap")));
+          }
+        });
+      } else {
+        window.alert("Message shall not be empty.");
+      }
+    }
+    function sendMessage(){
+      data = JSON.stringify({
+        fld_cid:parseInt(sessionStorage.getItem("id")),
+        fld_msg:$("#myMsg").val()
+      });
+      if ($("#myMsg").val() != ""){
+          $.post("https://pythomyapplication.000webhostapp.com/_pythomy/send.php",data,function(data){
+            if (data.status == "Created") {
+              $("#myMsg").val("");
+              window.alert("Message sent.");
+            }
+          });
+        } else {
+          window.alert("Message shall not be empty.");
+      }
+    }
+    function logout() { 
+      sessionStorage.removeItem("username");
+      sessionStorage.removeItem("id");
+      sessionStorage.removeItem("name");
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+
+</html>

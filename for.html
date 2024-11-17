@@ -1,0 +1,1398 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+        <title>for Loop</title>
+        <link rel="icon" href="images/landing_images/pythomy.ico">
+        <link href="fonts/material_icons/material-icons.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+        <link rel="stylesheet" type="text/css" href="css/commons.css">
+</head>
+
+<body hidden>
+  <nav class="nav-extended">
+    <ul id="dropdown1" class="dropdown-content">
+      <li id="name"></li>
+      <li class="divider"></li>
+      <li><a href="connreqs.html">Connection Requests</a></li>
+      <li class="divider"></li>
+      
+      <li><a href="javascript:leaderboard()">Leaderboard</a></li>
+      <li class="divider"></li>
+      <li><a data-target="rankSystem" class="modal-trigger">Ranking System</a></li>
+      <li class="divider"></li>
+      <li><a href="forums.html">Forums</a></li>
+      <li class="divider"></li>
+      <li><a href="convos.html">Conversations with Novices</a></li>
+      <li class="divider"></li>
+      <li><a href="experthelp.html">Conversations with Experts</a></li>
+      <li class="divider"></li>
+      <li><a href="events.html">Events by Experts</a></li>
+      <li class="divider"></li>
+      <li><a href="javascript:editProfile()">Edit Profile</a></li>
+      <li class="divider"></li>
+      <li><a href="javascript:changePassword()">Change Password</a></li>
+      <li class="divider"></li>
+      <li><a href="javascript:message()">Feedbacks & Concerns</a></li>
+      <li class="divider"></li>
+      <li><a href="javascript:logout()">Logout</a></li>
+    </ul>
+    <ul id="dropdown_lessons" class="dropdown-content">
+      <li><p style="color:black; padding: 0 20px;"><b>Simple Statements</b></p></li>
+      <li><a href="python.html">What is Python?</a></li>
+      <li><a href="simplestatements.html">Python Syntax</a></li>
+      <li><a href="indentations.html">Indentations</a></li>
+      <li class="divider"></li>
+      <li><p style="color:black; padding: 0 20px;"><b>Variables</b></p></li>
+      <li><a href="variables.html">Variables</a></li>
+      <li><a href="casting.html">Casting</a></li>
+      <li class="divider"></li>
+      <li><p style="color:black; padding: 0 20px;"><b>Data Types</b></p></li>
+      <li><a href="numbers.html">Numbers</a></li>
+      <li><a href="strings.html">Strings</a></li>
+      <li class="divider"></li>
+      <li><p style="color:black; padding: 0 20px;"><b>Operators</b></p></li>
+      <li><a href="arithmetic.html">Arithmetic</a></li>
+      <li><a href="assignment.html">Assignment</a></li>
+      <li><a href="comparison.html">Comparison</a></li>
+      <li><a href="logical.html">Logical</a></li>
+      <li><a href="membership.html">Membership</a></li>
+      <li class="divider"></li>
+      <li><p style="color:black; padding: 0 20px;"><b>Conditional Statements</b></p></li>
+      <li><a href="if.html">if</a></li>
+      <li><a href="elif.html">elif</a></li>
+      <li><a href="else.html">else</a></li>
+      <li class="divider"></li>
+      <li><p style="color:black; padding: 0 20px;"><b>Collections</b></p></li>
+      <li><a href="lists.html">Lists</a></li>
+      <li><a href="dictionaries.html">Dictionaries</a></li>
+      <li><p style="color:black; padding: 0 20px;"><b>Looping Statements</b></p></li>
+      <li><a href="while.html">while</a></li>
+      <li><a href="for.html">for</a></li>
+      <li class="divider"></li>
+      <li><p style="color:black; padding: 0 20px;"><b>Functions</b></p></li>
+      <li><a id="funcItem" href="javascript:cantGoHere()">Functions</a></li>
+      <li class="divider"></li>
+      <li><p style="color:black; padding: 0 20px;"><b>Object-Oriented Programming (OOP)</b></p></li>
+      <li><a id="classItem" href="javascript:cantGoHere()">Classes & Objects</a></li>
+      <li><a id="inheritItem" href="javascript:cantGoHere()">Inheritance</a></li>
+      <li class="divider"></li>
+      <li><p style="color:black; padding: 0 20px;"><b>Collections II</b></p></li>
+      <li><a id="setsItem" href="javascript:cantGoHere()">Sets</a></li>
+      <li><a id="tuplesItem" href="javascript:cantGoHere()">Tuples</a></li>
+      <li class="divider"></li>
+      <li><p style="color:black; padding: 0 20px;"><b>Math</b></p></li>
+      <li><a id="mathItem" href="javascript:cantGoHere()">Math</a></li>
+      <li class="divider"></li>
+      <li><p style="color:black; padding: 0 20px;"><b>String Formatting</b></p></li>
+      <li><a id="sfItem" href="javascript:cantGoHere()">String Formatting</a></li>
+    </ul>
+    <div class="nav-wrapper">
+      
+      <a id="logo-container" href="#loginmodal" class="brand-logo modal-trigger">
+        <div class="row">
+            <div class="col s1"><img src="images/landing_images/PythoMy Logo.png" width="60" height="60"></div>
+            <div class="col s1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PythoMy</div>
+        </div></a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a class="dropdown-trigger" href="#!" data-target="dropdown_lessons">My Lessons<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a class="dropdown-trigger" href="#!" data-target="dropdown1"  id="username"><i class="material-icons right">arrow_drop_down</i></a></li>
+      </ul>
+    </div>
+    
+  </nav>
+  
+  <ul class="sidenav" id="mobile-demo">
+        <center>
+          <li id="name-side"></li>
+          <li id="username-side"></li>
+        </center>
+        <li><p style="color:black; padding: 0 20px;"><b>Simple Statements</b></p></li>
+        <li><a href="python.html">What is Python?</a></li>
+        <li><a href="simplestatements.html">Python Syntax</a></li>
+        <li><a href="indentations.html">Indentations</a></li>
+        <li class="divider"></li>
+        <li><p style="color:black; padding: 0 20px;"><b>Variables</b></p></li>
+        <li><a href="variables.html">Variables</a></li>
+        <li><a href="casting.html">Casting</a></li>
+        <li class="divider"></li>
+        <li><p style="color:black; padding: 0 20px;"><b>Data Types</b></p></li>
+        <li><a href="numbers.html">Numbers</a></li>
+        <li><a href="strings.html">Strings</a></li>
+        <li class="divider"></li>
+        <li><p style="color:black; padding: 0 20px;"><b>Operators</b></p></li>
+        <li><a href="arithmetic.html">Arithmetic</a></li>
+        <li><a href="assignment.html">Assignment</a></li>
+        <li><a href="comparison.html">Comparison</a></li>
+        <li><a href="logical.html">Logical</a></li>
+        <li><a href="membership.html">Membership</a></li>
+        <li class="divider"></li>
+        <li><p style="color:black; padding: 0 20px;"><b>Conditional Statements</b></p></li>
+        <li><a href="if.html">if</a></li>
+        <li><a href="elif.html">elif</a></li>
+        <li><a href="else.html">else</a></li>
+        <li class="divider"></li>
+        <li><p style="color:black; padding: 0 20px;"><b>Collections</b></p></li>
+        <li><a href="lists.html">Lists</a></li>
+        <li><a href="dictionaries.html">Dictionaries</a></li>
+        <li class="divider"></li>
+        <li><p style="color:black; padding: 0 20px;"><b>Looping Statements</b></p></li>
+        <li><a href="while.html">while</a></li>
+        <li><a href="for.html">for</a></li>
+        <li class="divider"></li>
+        <li><p style="color:black; padding: 0 20px;"><b>Functions</b></p></li>
+        <li><a id="funcItem-side" href="javascript:cantGoHere()">Functions</a></li>
+        <li class="divider"></li>
+      <li><p style="color:black; padding: 0 20px;"><b>Object-Oriented Programming (OOP)</b></p></li>
+      <li><a id="classItem-side" href="javascript:cantGoHere()">Classes & Objects</a></li>
+      <li><a id="inheritItem-side" href="javascript:cantGoHere()">Inheritance</a></li>
+        <li class="divider"></li>
+        <li><p style="color:black; padding: 0 20px;"><b>Collections II</b></p></li>
+      <li><a id="setsItem-side" href="javascript:cantGoHere()">Sets</a></li>
+      <li><a id="tuplesItem-side" href="javascript:cantGoHere()">Tuples</a></li>
+      <li class="divider"></li>
+      <li><p style="color:black; padding: 0 20px;"><b>Math</b></p></li>
+      <li><a id="mathItem-side" href="javascript:cantGoHere()">Math</a></li>
+      <li class="divider"></li>
+      <li><p style="color:black; padding: 0 20px;"><b>String Formatting</b></p></li>
+      <li><a id="sfItem-side" href="javascript:cantGoHere()">String Formatting</a></li>
+      <li class="divider"></li>
+        <li><a href="connreqs.html">Connection Requests</a></li>
+      <li class="divider"></li>
+        
+        <li><a href="javascript:leaderboard()">Leaderboard</a></li>
+      <li class="divider"></li>
+        <li><a data-target="rankSystem" class="modal-trigger">Ranking System</a></li>
+      <li class="divider"></li>
+        <li><a href="forums.html">Forums</a></li>
+        <li class="divider"></li>
+        <li><a href="convos.html">Conversations with Novices</a></li>
+        <li class="divider"></li>
+        <li><a href="experthelp.html">Conversations with Experts</a></li>
+      <li class="divider"></li>
+        <li><a href="events.html">Events by Experts</a></li>
+      <li class="divider"></li>
+      <li><a href="javascript:editProfile()">Edit Profile</a></li>
+      <li class="divider"></li>
+      <li><a href="javascript:changePassword()">Change Password</a></li>
+      <li class="divider"></li>
+        <li><a href="javascript:message()">Feedbacks & Concerns</a></li>
+        <li class="divider"></li>
+        <li><a href="javascript:logout()">Logout</a></li>
+  </ul>
+
+
+  <div class="section">
+    <div class="container">
+      <h3>for Loop</h3>
+      <div class="divider"></div>
+      <p>The <b>for</b> statement is used to check every item in a <b>sequence (e.g. list, string)</b>.</p>
+      <div class="card" style="background-color:black; font-family:'Courier';"> 
+        <p class="code_or_output">for alphabet in "ABCDEFGHIJKLMNOPQRSTUVWXYZ":</p>
+        <p class="code_or_output">&nbsp;&nbsp;&nbsp;print(alphabet)</p>
+      </div>
+      <div class="card" style="background-color:black; font-family:'Courier';"> 
+        <p class="code_or_output">A</p>
+        <p class="code_or_output">B</p>
+        <p class="code_or_output">C</p>
+        <p class="code_or_output">D</p>
+        <p class="code_or_output">E</p>
+        <p class="code_or_output">F</p>
+        <p class="code_or_output">G</p>
+        <p class="code_or_output">H</p>
+        <p class="code_or_output">I</p>
+        <p class="code_or_output">J</p>
+        <p class="code_or_output">K</p>
+        <p class="code_or_output">L</p>
+        <p class="code_or_output">M</p>
+        <p class="code_or_output">N</p>
+        <p class="code_or_output">O</p>
+        <p class="code_or_output">P</p>
+        <p class="code_or_output">Q</p>
+        <p class="code_or_output">R</p>
+        <p class="code_or_output">S</p>
+        <p class="code_or_output">T</p>
+        <p class="code_or_output">U</p>
+        <p class="code_or_output">V</p>
+        <p class="code_or_output">W</p>
+        <p class="code_or_output">X</p>
+        <p class="code_or_output">Y</p>
+        <p class="code_or_output">Z</p>
+      </div>
+      <p>From this example, it displayed every <b>alphabet</b> from the evaluated string.</p>
+      <p><b>Adapted from:</b> Python Tutorial. (n.d.). Retrieved from <a target="_blank" href="https://www.w3schools.com/python/default.asp">https://www.w3schools.com/python/default.asp</a></p>
+      <img src="images/landing_images/blank_video.png" class="responsive-img" alt="Blank Video">
+      <h5>QUIZ</h5>
+      <div class="divider"></div>
+      <ol type="1">
+        <li><b>Create</b> a <b>list</b> named <b>numbers</b> that <b>contains numbers from 1 to 10</b>.</li>
+        <li><b>For</b> each <b>number in numbers</b>, <b>multiply it by itself</b> then <b>display number</b>.</li>
+      </ol>
+      <h5>YOUR CODE</h5>
+      <div class="divider"></div>
+      <textarea wrap="hard" id="forAns" class="code" onfocus="checkIfBlank()" oninput="clearAns()" onchange="clearAns()"></textarea>
+      <div class="row">
+        <div class="col s6">
+          <a class="btn waves-effect waves-light btn-large disabled" id="btnRun" onclick="run()">Run</a>
+        </div>
+        <div class="col s6">
+          <a class="btn waves-effect waves-light btn-large disabled" id="btnSubmit" onclick="submit()">Submit</a>
+        </div>
+      </div>
+      <h5>OUTPUT</h5>
+      <div class="divider"></div>
+      <textarea wrap="hard" id="forRun" class="code" readonly></textarea>
+      <div class="row">
+        <div class="col s12">
+          <a onclick="viewComments()" class="btn waves-effect waves-light btn-large modal-trigger">View Comments</a>
+        </div>
+      </div>
+      <!-- Modal Structure -->
+      <div id="messages" class="modal">
+        <div class="modal-content">
+          <h4>Conversation with Admin</h4>
+          <ul id="privateMessages" style="list-style-type:none">
+            
+          </ul>
+          <h5>Your Message</h5>
+          <div class="row">
+            <div class="col s12">
+              <textarea wrap="hard" id="myMessage" class="materialize-textarea"></textarea>
+              <a class="btn waves-effect waves-light btn-large" id="btnFeedback">Send Message</a>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="javascript:stopInterval()" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+      </div>
+      <div id="reportmodal" class="modal">
+        <div class="modal-content">
+          <select id="fld_reasonid" onchange="checkIfValid()" onfocus="checkIfValid()">
+              <option value="" disabled selected>Reason for reporting this comment<sup>*</sup></option>
+              <option value="1">Offensive Language, Verbal Abuse and Hate Speech</option>
+              <option value="2">Violence</option>
+              <option value="3">Sexual Content</option>
+              <option value="4">Promotion of Prohibited Content (e.g. Drugs, Alcohol, Cigarettes)</option>
+              <option value="5">Spam</option>
+              <option value="6">Suicidal Content</option>
+              <option value="7">Other</option>
+          </select>
+          <div class='input-field col s12 offset-s1'>
+            <textarea wrap="hard" id="fld_message" class="materialize-textarea" onchange="checkIfValid()" oninput="checkIfValid()" onfocus="checkIfValid()"></textarea>
+            <label for='fld_message'>Message<sup>*</sup></label>
+          </div>
+          <div class="col s12 ">
+            <a class="col s12 btn btn-large waves-effect darken-3 disabled" id="reportButton" onclick="report()">Report</a>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+      </div>
+      <div class="modal" id="editProfileModal">
+        <div class="modal-content">
+          <h4>Update Profile</h4>
+          <div class="divider"></div>
+          <div class="row">
+            <div class="col s12">
+              <div class='input-field col s12'>
+                <i class="material-icons prefix">person</i>
+                <input class='validate' type='text' required id='firstname' />
+                <label class="active" for='firstname'>First Name<sup>*</sup></label>
+              </div>
+              <div class='input-field col s12'>
+                <i class="material-icons prefix">person</i>
+                <input class='validate' type='text' required id="lastname" />
+                <label class="active" for='lastname'>Last Name<sup>*</sup></label>
+              </div>
+              <div class='input-field col s12'>
+                <i class="material-icons prefix">account_box</i>
+                <input class='validate' type='text' required id='username-edit' />
+                <label class="active" for='username-edit'>Username<sup>*</sup></label>
+              </div>
+              <center>
+                <button class='col s12 btn btn-large waves-effect darken-3' style="background-color: #0fbcf9!important;" onclick="updateProfile()">Update</button>
+              </center>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+      </div>
+      <div class="modal" id="changePasswordModal">
+        <div class="modal-content">
+          <h4>Change Password</h4>
+          <div class="divider"></div>
+          <div class="row">
+            <div class="col s12">
+              <div class='input-field col s12'>
+                <i class="material-icons prefix">lock</i>
+                <input class='validate' type='password' required id="password" />
+                <label for='password'>Password<sup>*</sup></label>
+              </div>
+              <div class='input-field col s12'>
+                <i class="material-icons prefix">lock</i>
+                <input class='validate' type='password' required id="confirm_password" />
+                <label for='confirm_password'>Confirm Password<sup>*</sup></label>
+              </div>
+              <center>
+                <button class='col s12 btn btn-large waves-effect darken-3' style="background-color: #0fbcf9!important;" onclick="changePwd()">Change Password</button>
+              </center>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+      </div>
+      <div id="rankSystem" class="modal">
+        <div class="modal-content">
+          <h3>Ranking System</h3>
+          <div class="divider"></div>
+          <h5 style="text-align:center;">EXPERTS</h5>
+          <div class="divider"></div><br>
+          <center><img src="images/RankBadges/platinum.png" style="height: auto; width: 50%;" class="responsive-img" alt="Platinum Kings"></center>
+          <h5>Platinum Kings (1000 and above PPS)</h5>
+          <div class="divider"></div>
+          <p>They are the kings in PythoMy. They have helped so many users that they are now royal rulers in the PythoMy community whose mission is to serve it with a golden heart even though their on the very top of the game.</p>
+          <center><img src="images/RankBadges/gold.png" style="height: auto; width: 50%;" class="responsive-img" alt="Golden Priests"></center>
+          <h5>Golden Priests (750 - 999 PPS)</h5>
+          <div class="divider"></div>
+          <p>They are the knights that scratched and clawed to the top to become an honored priest of the PythoMy kingdom whose mission is to assist the Platinum Kings by helping the users out.</p>
+          <h5 style="text-align:center;">NOVICES</h5>
+          <div class="divider"></div><br>
+          <center><img src="images/RankBadges/silver.png" style="height: auto; width: 50%;" class="responsive-img" alt="Silver Knights"></center>
+          <h5>Silver Knights (500 - 749 PPS)</h5>
+          <div class="divider"></div>
+          <p>They are interns of the Golden Priests. They are students who have highly excelled in their learning of the Python programming so their role now is to enhance that learning by learning from more lessons and helping fellow Silver Knights and Bronze Privates out to become an understanding to somehow reach the Expert class.</p>
+          <center><img src="images/RankBadges/bronze.png" style="height: auto; width: 50%;" class="responsive-img" alt="Bronze Troopers"></center>
+          <h5>Bronze Troopers (200 - 499 PPS)</h5>
+          <div class="divider"></div>
+          <p>They are the students who learn from the higher-ups. They learn all Python programming's fundamentals and help fellow troopers out to reach the Silver Knight position. They really need the eagerness to learn for them to reach higher ranks and somehow become a Python programming expert.</p>
+          <center><img src="images/RankBadges/shadows.png" style="height: auto; width: 50%;" class="responsive-img" alt="Shadow Kids"></center>
+          <h5>Shadow Kids (0 - 199 PPS)</h5>
+          <div class="divider"></div>
+          <p>They are the new generation (infant stage) of troopers who need to learn the very basics of Programming before entering the academy to be a Bronze Trooper.</p><br>
+          <h4>What is PPS?</h4>
+          <div class="divider"></div>
+          <p>PPS stands for <b>Python Programming Score</b>. It is a prestige point earned to upgrade your rank.</p>
+          <p><b>1 Completed Lesson</b> = <b>50 PPS</b></p>
+          <p><b>1 Honored Comment</b> = <b>30 PPS</b></p>
+          <p><b>1 Completed Topic</b> = <b>25 PPS</b></p>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+      </div>
+      <div id="leaderboard" class="modal">
+        <div class="modal-content">
+          <h3>Leaderboard</h3>
+          <div class="divider"></div>
+          <center>
+            <h5 id="myRank"></h5>
+            <h5 id="pps"></h5>
+            <div class="divider"></div><br>
+            <img id="rankImg" class="responsive-img" alt="Your Rank" style="width:50%; height:auto;"></img>
+          </center>
+          <table class="responsive">
+            <thead>
+              <tr>
+                <th>Place</th>
+                <th>Username</th>
+                <th>Score</th>
+              </tr>
+            </thead>
+            <tbody id="board">
+              
+            </tbody>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <a href="javascript:stopInterval()" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+      </div>
+      <div id="spec" class="modal">
+        <div class="modal-content">
+          <p><b><span id="myName"></span><span onclick="makeConnect()" id="connLink" style="color:green; cursor:pointer;"></span></b></p>
+          <p><b><span id="myRank"></span></b></p>
+          <p><b><span id="myTime"></span></b></p>
+          <p><span id="myComment" style="white-space: pre-line;"></span></p>
+          <p><span id="myHonors"></span></p>
+          <a class="btn waves-effect waves-light btn-large" id="btnEvaluate" style="background-color:gold; font-size:24px;" onclick="evaluateComment()"></a>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+      </div>
+      <div id="commentEdit" class="modal">
+        <div class="modal-content">
+          <h3>Edit Comment</h3>
+          <div class="row">
+            <div class="col s12">
+              <div class='input-field col s12'>
+                <textarea class='materialize-textarea auto-lines-expand' required id='comment_to_edit' onchange="checkIfValidEditComment()" oninput="checkIfValidEditComment()" onfocus="checkIfValidEditComment()"></textarea>
+                <label for='comment_to_edit'>Comment<sup>*</sup></label>
+              </div>
+            </div>
+          </div>
+          <div class='row col s10 offset-s1'>
+            <center>
+                <button id="btnEditComment" class='col s12 btn btn-large waves-effect darken-3 disabled' onclick="editComment()">Save Changes</button>
+            </center>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+      </div>
+      <div id="comments" class="modal">
+        <div class="modal-content">
+          <h4 id="numberOfComments"></h4>
+          <ul id="publicComments" style="list-style-type:none">
+            
+          </ul>
+
+          <h5>Your Comment</h5>
+          <div class="row">
+            <div class="col s12">
+              <textarea wrap="hard" id="comment" onchange="checkIfBlankComment()" oninput="checkIfBlankComment()" onfocus="checkIfBlankComment()" class="materialize-textarea auto-lines-expand"></textarea>
+              
+              <a data-target="comments" class="btn waves-effect waves-light btn-large modal-trigger" onclick="postComment()">Comment</a>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="javascript:stopInterval()" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      if (localStorage.getItem("username") == null) {
+        window.location.href = "index.html";
+        window.alert("Your session may have expired. Please log in to proceed. Thank you.");
+      } else {
+        $.getJSON("https://pythomy-staging.000webhostapp.com/_pythomy/ifanswered.php?cid=" + parseInt(localStorage.getItem("id")) + "&lid=" + 17, function(data) {
+          if (data.status == "Accepted") {
+            $("body").show();
+          } else {
+            window.alert("Can't go here yet. Kindly finish first the while topic and/or the previous lessons and topics before it if you haven't finished them yet. Thank you.");
+            window.history.back();
+          }
+        });
+      }
+      $("#firstname").val(localStorage.getItem("firstname"));
+      $("#lastname").val(localStorage.getItem("lastname"));
+      $("#username-edit").val(localStorage.getItem("username"));
+      M.updateTextFields();
+      $('.sidenav').sidenav();
+      $('select').formSelect();
+      $(".dropdown-trigger").dropdown();
+      $("#username").html(localStorage.getItem("username") + "<i class='material-icons right'>arrow_drop_down</i>");
+      $("#username-side").html(localStorage.getItem("username"));
+      $("#name").html("<a style='color:black;'><b>" + localStorage.getItem("name") + " " + "(" + localStorage.getItem("role") + ")" + "</b></a>");
+      $("#name-side").html("<a style='color:black;'><b>" + localStorage.getItem("name") + " " + "(" + localStorage.getItem("role") + ")" + "</b></a>");
+      $(".modal").modal();
+      $("#btnEvaluate").hide();
+      $("#spec").modal({
+        dismissible:true,
+        onCloseEnd: function() {
+          $("#myHonors").html("");
+          $("#btnEvaluate").hide();
+          $("#connLink").html("");
+        }
+      });
+    });
+    function checkIfValidEditComment() {
+      if ($("#comment_to_edit").val().trim() == "" || $("#comment_to_edit").val().trim() == localStorage.getItem("comment_to_edit").trim()) {
+        document.getElementById("btnEditComment").className = "col s12 btn btn-large waves-effect darken-3 disabled";
+        $("#btnEditComment").css("background-color", "");
+      } else {
+        document.getElementById("btnEditComment").className = "col s12 btn btn-large waves-effect darken-3";
+        $("#btnEditComment").css("background-color", "#0fbcf9");
+      }
+    }
+    function displayEditCommentModal(id, comment) {
+      $("#commentEdit").modal("open");
+      localStorage.setItem("commentid", id);
+      localStorage.setItem("comment_to_edit", comment);
+      loadCommentToEdit(comment);
+    }
+    function loadCommentToEdit(comment) {
+      $("#comment_to_edit").val(comment);
+      M.updateTextFields();
+    }
+    function editComment() {
+      var commentData = JSON.stringify({
+        fld_id: localStorage.getItem("commentid"),
+        fld_comment: $("#comment_to_edit").val()
+      });
+      if ($("#comment_to_edit").val().trim() != "") {
+        $.post("https://pythomy-staging.000webhostapp.com/_pythomy/updatecomment.php",commentData,function(data){
+          if (data.status == "Accepted") {
+            localStorage.setItem("comment_to_edit", $("#comment_to_edit").val());
+            window.alert("Comment edited.");
+            loadComments();
+            checkIfValidEditComment();
+          } else {
+            window.alert("Something went wrong in editing this comment. Please try again.");
+          }
+        });
+      }
+    }
+    function clearPasswords() {
+      $("#current_password").val("");
+      $("#password").val("");
+      $("#confirm_password").val("");
+      $("#fld_verifcode").val("");
+      document.getElementById("btnChangePass").className = "col s12 btn btn-large waves-effect darken-3 disabled";
+      $("#btnChangePass").css("background-color", "");
+      document.getElementById("btn-verify").className = "col s12 btn btn-large waves-effect darken-3 disabled";
+      $("#btn-verify").css("background-color", "");
+    }
+    function clearVerifCode() {
+      $("#fld_verifcode").val("");
+      document.getElementById("btn-verify").className = "col s12 btn btn-large waves-effect darken-3 disabled";
+      $("#btn-verify").css("background-color", "");
+    }
+    document.addEventListener("keyup", function (e) {
+    var keyCode = e.keyCode ? e.keyCode : e.which;
+            if (keyCode == 44) {
+                stopPrntScr();
+            }
+        });
+function stopPrntScr() {
+
+            var inpFld = document.createElement("input");
+            inpFld.setAttribute("value", ".");
+            inpFld.setAttribute("width", "0");
+            inpFld.style.height = "0px";
+            inpFld.style.width = "0px";
+            inpFld.style.border = "0px";
+            document.body.appendChild(inpFld);
+            inpFld.select();
+            document.execCommand("copy");
+            inpFld.remove(inpFld);
+        }
+       function AccessClipboardData() {
+            try {
+                window.clipboardData.setData('text', "Access   Restricted");
+            } catch (err) {
+            }
+        }
+        setInterval("AccessClipboardData()", 300);
+  </script>
+  <script type="text/javascript">
+    isAnswered = false;
+    $.getJSON("https://pythomy-staging.000webhostapp.com/_pythomy/ifanswered.php?cid=" + parseInt(localStorage.getItem("id")) + "&lid=17",function(data){
+      if (data.status == "Accepted") {
+        document.getElementById("btnSubmit").className = "btn waves-effect waves-light btn-large disabled";
+        isAnswered = true;
+      }
+    });
+    interval = null;
+    $(document).keyup(function(e) {
+      if (e.keyCode === 27) stopInterval();   // esc
+    });
+    $.getJSON("https://pythomy-staging.000webhostapp.com/_pythomy/ifanswered.php?cid=" + parseInt(localStorage.getItem("id")) + "&lid=" + 17, function(data){
+        if (data.status == "Accepted") {
+          $("#funcItem").attr("href","functions.html");
+          $("#funcItem-side").attr("href","functions.html");
+        }
+    });
+    $.getJSON("https://pythomy-staging.000webhostapp.com/_pythomy/ifanswered.php?cid=" + parseInt(localStorage.getItem("id")) + "&lid=" + 19, function(data){
+        if (data.status == "Accepted") {
+          $("#classItem").attr("href","classes.html");
+          $("#classItem-side").attr("href","classes.html");
+        }
+    });
+    $.getJSON("https://pythomy-staging.000webhostapp.com/_pythomy/ifanswered.php?cid=" + parseInt(localStorage.getItem("id")) + "&lid=" + 20, function(data){
+        if (data.status == "Accepted") {
+          $("#inheritItem").attr("href","inheritance.html");
+          $("#inheritItem-side").attr("href","inheritance.html");
+        }
+    });
+    $.getJSON("https://pythomy-staging.000webhostapp.com/_pythomy/ifanswered.php?cid=" + parseInt(localStorage.getItem("id")) + "&lid=" + 21, function(data){
+        if (data.status == "Accepted") {
+          $("#setsItem").attr("href","sets.html");
+          $("#setsItem-side").attr("href","sets.html");
+        }
+    });
+    $.getJSON("https://pythomy-staging.000webhostapp.com/_pythomy/ifanswered.php?cid=" + parseInt(localStorage.getItem("id")) + "&lid=" + 22, function(data){
+        if (data.status == "Accepted") {
+          $("#tuplesItem").attr("href","tuples.html");
+          $("#tuplesItem-side").attr("href","tuples.html");
+        }
+    });
+    $.getJSON("https://pythomy-staging.000webhostapp.com/_pythomy/ifanswered.php?cid=" + parseInt(localStorage.getItem("id")) + "&lid=" + 23, function(data){
+        if (data.status == "Accepted") {
+          $("#mathItem").attr("href","math.html");
+          $("#mathItem-side").attr("href","math.html");
+        }
+    });
+    $.getJSON("https://pythomy-staging.000webhostapp.com/_pythomy/ifanswered.php?cid=" + parseInt(localStorage.getItem("id")) + "&lid=" + 24, function(data){
+        if (data.status == "Accepted") {
+          $("#sfItem").attr("href","stringformatting.html");
+          $("#sfItem-side").attr("href","stringformatting.html");
+        }
+    });
+    $.getJSON("https://pythomy-staging.000webhostapp.com/_pythomy/selectrole.php?cid=" + parseInt(localStorage.getItem("id")),function(data){
+      if (data[0].fld_role == "Expert") {
+        $("#dropdown1").empty();
+        $("#dropdown1").append('<li id="name"></li>');
+        $("#name").html("<a style='color:black;'><b>" + localStorage.getItem("name") + " " + "(" + localStorage.getItem("role") + ")" + "</b></a>");
+        
+        $("#dropdown1").append('<li class="divider"></li>');
+        $("#dropdown1").append('<li><a href="connreqs.html">Connection Requests</a></li>');
+        $("#dropdown1").append('<li class="divider"></li>');
+        $("#dropdown1").append('<li><a href="javascript:leaderboard()">Leaderboard</a></li>');
+        $("#dropdown1").append('<li class="divider"></li>');
+        $("#dropdown1").append('<li><a data-target="rankSystem" class="modal-trigger">Ranking System</a></li>');
+        $("#dropdown1").append('<li class="divider"></li>');
+        $("#dropdown1").append('<li><a href="forums.html">Forums</a></li>');
+        $("#dropdown1").append('<li class="divider"></li>');
+        $("#dropdown1").append('<li><a href="convos.html">Conversations with Novices</a></li>');
+        $("#dropdown1").append('<li class="divider"></li>');
+        $("#dropdown1").append('<li><a href="experthelp.html">Conversations with Experts</a></li>');
+        $("#dropdown1").append('<li class="divider"></li>');
+        $("#dropdown1").append('<li><a href="addevents.html">Events with Experts</a></li>');
+        $("#dropdown1").append('<li class="divider"></li>');
+        $("#dropdown1").append('<li><a href="javascript:editProfile()">Edit Profile</a></li>');
+        $("#dropdown1").append('<li class="divider"></li>');
+        $("#dropdown1").append('<li><a href="javascript:changePassword()">Change Password</a></li>');
+        $("#dropdown1").append('<li class="divider"></li>');
+        $("#dropdown1").append('<li><a href="javascript:message()">Feedbacks & Concerns</a></li>');
+        $("#dropdown1").append('<li class="divider"></li>');
+        $("#dropdown1").append('<li><a href="javascript:logout()">Logout</a></li>');
+        $("#mobile-demo").empty();
+        $("#mobile-demo").append('<center><li id="name-side"></li>');
+        $("#name-side").html("<a style='color:black;'><b>" + localStorage.getItem("name") + " " + "(" + localStorage.getItem("role") + ")" + "</b></a>");
+        $("#mobile-demo").append('<li id="username-side" style="text-align: center;"></li></center>');
+        $("#username-side").html(localStorage.getItem("username"));
+        $("#mobile-demo").append('<li><p style="color:black; padding: 0 20px;"><b>Simple Statements</b></p></li>');
+        $("#mobile-demo").append('<li><a href="python.html">What is Python?</a></li>');
+        $("#mobile-demo").append('<li><a href="simplestatements.html">Python Syntax</a></li>');
+        $("#mobile-demo").append('<li><a href="indentations.html">Indentations</a></li>');
+        $("#mobile-demo").append('<li class="divider"></li>');
+        $("#mobile-demo").append('<li><p style="color:black; padding: 0 20px;"><b>Variables</b></p></li>');
+        $("#mobile-demo").append('<li><a href="variables.html">Variables</a></li>');
+        $("#mobile-demo").append('<li><a href="casting.html">Casting</a></li>');
+        $("#mobile-demo").append('<li class="divider"></li>');
+        $("#mobile-demo").append('<li><p style="color:black; padding: 0 20px;"><b>Data Types</b></p></li>');
+        $("#mobile-demo").append('<li><a href="numbers.html">Numbers</a></li>');
+        $("#mobile-demo").append('<li><a href="strings.html">Strings</a></li>');
+        $("#mobile-demo").append('<li class="divider"></li>');
+        $("#mobile-demo").append('<li><p style="color:black; padding: 0 20px;"><b>Operators</b></p></li>');
+        $("#mobile-demo").append('<li><a href="arithmetic.html">Arithmetic</a></li>');
+        $("#mobile-demo").append('<li><a href="assignment.html">Assignment</a></li>');
+        $("#mobile-demo").append('<li><a href="comparison.html">Comparison</a></li>');
+        $("#mobile-demo").append('<li><a href="logical.html">Logical</a></li>');
+        $("#mobile-demo").append('<li><a href="membership.html">Membership</a></li>');
+        $("#mobile-demo").append('<li class="divider"></li>');
+        $("#mobile-demo").append('<li><p style="color:black; padding: 0 20px;"><b>Conditional Statements</b></p></li>');
+        $("#mobile-demo").append('<li><a href="if.html">if</a></li>');
+        $("#mobile-demo").append('<li><a href="elif.html">elif</a></li>');
+        $("#mobile-demo").append('<li><a href="else.html">else</a></li>');
+        $("#mobile-demo").append('<li class="divider"></li>');
+        $("#mobile-demo").append('<li><p style="color:black; padding: 0 20px;"><b>Collections</b></p></li>');
+        $("#mobile-demo").append('<li><a href="lists.html">Lists</a></li>');
+        $("#mobile-demo").append('<li><a href="dictionaries.html">Dictionaries</a></li>');
+        $("#mobile-demo").append('<li class="divider"></li>');
+        $("#mobile-demo").append('<li><p style="color:black; padding: 0 20px;"><b>Looping Statements</b></p></li>');
+        $("#mobile-demo").append('<li><a href="while.html">while</a></li>');
+        $("#mobile-demo").append('<li><a href="for.html">for</a></li>');
+        $("#mobile-demo").append('<li class="divider"></li>');
+        $("#mobile-demo").append('<li><p style="color:black; padding: 0 20px;"><b>Functions</b></p></li>');
+        $("#mobile-demo").append('<li><a href="functions.html">Functions</a></li>');
+        $("#mobile-demo").append('<li class="divider"></li>');
+        $("#mobile-demo").append('<li><p style="color:black; padding: 0 20px;"><b>Object-Oriented Programming (OOP)</b></p></li>');
+        $("#mobile-demo").append('<li><a href="classes.html">Classes & Objects</a></li>');
+        $("#mobile-demo").append('<li><a href="inheritance.html">Inheritance</a></li>');
+        $("#mobile-demo").append('<li class="divider"></li>');
+        $("#mobile-demo").append('<li><p style="color:black; padding: 0 20px;"><b>Collections II</b></p></li>');
+        $("#mobile-demo").append('<li><a href="sets.html">Sets</a></li>');
+        $("#mobile-demo").append('<li><a href="tuples.html">Tuples</a></li>');
+        $("#mobile-demo").append('<li class="divider"></li>');
+        $("#mobile-demo").append('<li><p style="color:black; padding: 0 20px;"><b>Math</b></p></li>');
+        $("#mobile-demo").append('<li><a href="math.html">Math</a></li>');
+        $("#mobile-demo").append('<li class="divider"></li>');
+        $("#mobile-demo").append('<li><p style="color:black; padding: 0 20px;"><b>String Formatting</b></p></li>');
+        $("#mobile-demo").append('<li><a href="stringformatting.html">String Formatting</a></li>');
+        $("#mobile-demo").append('<li class="divider"></li>');
+        $("#mobile-demo").append('<li><a href="connreqs.html">Connection Requests</a></li>');
+        $("#mobile-demo").append('<li class="divider"></li>');
+        $("#mobile-demo").append('<li><a href="javascript:leaderboard()">Leaderboard</a></li>');
+        $("#mobile-demo").append('<li class="divider"></li>');
+        $("#mobile-demo").append('<li><a data-target="rankSystem" class="modal-trigger">Ranking System</a></li>');
+        $("#mobile-demo").append('<li class="divider"></li>');
+        $("#mobile-demo").append('<li><a href="forums.html">Forums</a></li>');
+        $("#mobile-demo").append('<li class="divider"></li>');
+        $("#mobile-demo").append('<li><a href="convos.html">Conversations with Novices</a></li>');
+        $("#mobile-demo").append('<li class="divider"></li>');
+        $("#mobile-demo").append('<li><a href="experthelp.html">Conversations with Experts</a></li>');
+        $("#mobile-demo").append('<li class="divider"></li>');
+        $("#mobile-demo").append('<li><a href="addevents.html">Events with Experts</a></li>');
+        $("#mobile-demo").append('<li class="divider"></li>');
+        $("#mobile-demo").append('<li><a href="javascript:editProfile()">Edit Profile</a></li>');
+        $("#mobile-demo").append('<li class="divider"></li>');
+        $("#mobile-demo").append('<li><a href="javascript:changePassword()">Change Password</a></li>');
+        $("#mobile-demo").append('<li class="divider"></li>');
+        $("#mobile-demo").append('<li><a href="javascript:message()">Feedbacks & Concerns</a></li>');
+        $("#mobile-demo").append('<li class="divider"></li>');
+        $("#mobile-demo").append('<li><a href="javascript:logout()">Logout</a></li>');
+        $("#funcItem").attr("href","functions.html");
+        $("#funcItem-side").attr("href","functions.html");
+        $("#classItem").attr("href","classes.html");
+        $("#classItem-side").attr("href","classes.html");
+        $("#inheritItem").attr("href","inheritance.html");
+        $("#inheritItem-side").attr("href","inheritance.html");
+        $("#setsItem").attr("href","sets.html");
+        $("#setsItem-side").attr("href","sets.html");
+        $("#tuplesItem").attr("href","tuples.html");
+        $("#tuplesItem-side").attr("href","tuples.html");
+        $("#mathItem").attr("href","math.html");
+        $("#mathItem-side").attr("href","math.html");
+        $("#sfItem").attr("href","stringformatting.html");
+        $("#sfItem-side").attr("href","stringformatting.html");
+      }
+    });
+    function message() {
+      loadMessages(12);
+      localStorage.setItem("kausap",12);
+      $("#messages").modal("open");
+      interval = setInterval(() => {
+        loadMessages(12);
+      },5000);
+    }
+    function loadMessages(id) {
+      $.getJSON("https://pythomy-staging.000webhostapp.com/_pythomy/selchats.php?from=" + id + "&to=" + parseInt(localStorage.getItem("id")),function(data){
+        $("#privateMessages").empty();
+        if (data.length == 0) {
+          $("#privateMessages").append("<li><p style='text-align: center;'><b>There are no messages yet. Be the first to message now!</b></p></li>");
+        } else {
+          for (i = 0; i < data.length; i++) {
+            $("#privateMessages").append("<li>" + "<h6><b>" + data[i].fld_firstname + " " + data[i].fld_lastname + " (" + data[i].fld_username + ")</b></h6>" + "<h6><b>" + data[i].fld_timestamp + "</b></h6>" + "<p>" + data[i].fld_message + "</p>" + "</li>" + "<div class='divider'></div>");
+          }
+        }
+      });
+    }
+   // Feedbacks and Concerns
+    document.getElementById("btnFeedback").onclick = function() {
+        data = JSON.stringify({
+        fld_from: parseInt(localStorage.getItem("id")),
+        fld_to: parseInt(localStorage.getItem("kausap")),
+        fld_message: $("#myMessage").val()
+      });
+      if ($("#myMessage").val() != "") {
+        $.post("https://pythomy-staging.000webhostapp.com/_pythomy/sendchat.php",data,function(data){
+          if (data.status == "Created") {
+            $("#privateMessages").empty();
+            $("#myMessage").val("");
+            loadMessages(parseInt(localStorage.getItem("kausap")));
+          }
+        });
+      } else {
+        window.alert("Message shall not be empty.");
+      }
+    }
+    myRank = "";
+    function leaderboard() {
+      $("#leaderboard").modal("open");
+      dataOfBoard();
+    }
+    function titleCase(str){
+      str = str.toLowerCase().split(' ');
+      let final = [ ];
+      for(let word of str){
+        final.push(word.charAt(0).toUpperCase()+ word.slice(1));
+      }
+      return final.join(' ')
+    }
+    function editProfile() {
+      $("#editProfileModal").modal("open");
+    }
+    function updateProfile() {
+      let firstname = $("#firstname").val();
+      let lastname = $("#lastname").val();
+      let username = $("#username-edit").val();
+
+      if ((firstname.toLowerCase() != localStorage.getItem("firstname").toLowerCase() || lastname.toLowerCase() != localStorage.getItem("lastname").toLowerCase() || username.toLowerCase() != localStorage.getItem("username").toLowerCase()) && firstname != "" && lastname != "" && username != "") {
+        if ((firstname.match(/[A-Z]/g) || firstname.match(/[a-z]/g)) && (lastname.match(/[A-Z]/g) || lastname.match(/[a-z]/g)) && !firstname.match(/[0-9]/g) && !lastname.match(/[0-9]/g) && !firstname.match(/[!$%^&*()_+|~=`{}\[\]:";<>?\/@]/g) && !lastname.match(/[!$%^&*()_+|~=`{}\[\]:";<>?\/@]/g)) {
+          let info = JSON.stringify({
+            fld_id: parseInt(localStorage.getItem("id")),
+            fld_firstname: titleCase(firstname.trim()),
+            fld_lastname: titleCase(lastname.trim()),
+            fld_username: username
+          });
+          $.post("https://pythomy-staging.000webhostapp.com/_pythomy/updateprofile.php", info, function(data){
+            if (data.status == "Accepted") {
+              window.alert("Profile successfully updated.");
+              localStorage.setItem("name", titleCase(firstname.trim()) + " " + titleCase(lastname.trim()));
+              localStorage.setItem("username", username);
+              localStorage.setItem("firstname", titleCase(firstname.trim()));
+              localStorage.setItem("lastname", titleCase(lastname.trim()));
+              $("#name").html("<a style='color:black;'><b>" + localStorage.getItem("name") + " " + "(" + localStorage.getItem("role") + ")" + "</b></a>");
+              $("#name-side").html("<a style='color:black;'><b>" + localStorage.getItem("name") + " " + "(" + localStorage.getItem("role") + ")" + "</b></a>");
+              $("#username").html(localStorage.getItem("username") + "<i class='material-icons right'>arrow_drop_down</i>");
+              $("#username-side").html(localStorage.getItem("username"));
+            } else {
+              window.alert("Something went wrong. Please try again.");
+            }
+          });
+        } else {
+          window.alert("First Name and Last Name should only contain alphabets (most important) and/or these symbols (- ' . ,). Thank you.");
+        }
+      } else {
+
+        if (firstname.toLowerCase() == localStorage.getItem("firstname").toLowerCase() && lastname.toLowerCase() == localStorage.getItem("lastname").toLowerCase() && username.toLowerCase() == localStorage.getItem("username").toLowerCase()) {
+          window.alert("You are not updating anything. Thank you for the input.");
+        }
+
+        if (firstname == "" || lastname == "" || username == "") {
+          window.alert("All of these fields cannot be empty. They are required. Thank you for the input.");
+          $("#firstname").val(localStorage.getItem("firstname"));
+          $("#lastname").val(localStorage.getItem("lastname"));
+          $("#username-edit").val(localStorage.getItem("username"));
+          M.updateTextFields();
+        }
+
+      }
+    }
+    function changePassword() {
+      $("#changePasswordModal").modal("open");
+    }
+    function changePwd() {
+      let password = $("#password").val();
+      let confirm_password = $("#confirm_password").val();
+      if (password != "" && confirm_password != "") {
+        if (password == confirm_password) {
+          let form_data = JSON.stringify({
+            fld_id: parseInt(localStorage.getItem("id")),
+            fld_password: password
+          });
+          $.post("https://pythomy-staging.000webhostapp.com/_pythomy/changepass.php", form_data, function(data){
+            if (data.status == "Accepted") {
+              window.alert("Password successfully changed.");
+              $("#password").val("");
+              $("#confirm_password").val("");
+            } else {
+              window.alert("Something went wrong. Please try again.");
+            }
+          });
+        } else {
+          window.alert("Passwords should match. Thank you.")
+        }
+      } else {
+        window.alert("Please fill up all fields required. Thank you.");
+      }
+    }
+    whoCommented = "";
+    function specComment(id) {
+      $.getJSON("https://pythomy-staging.000webhostapp.com/_pythomy/speccomment.php?id=" + id,function(data){
+        console.log(data);
+        $("#spec").modal("open");
+        noOfHonors(id);
+        ifHonored(id,localStorage.getItem("id"));
+        let comment = data[0].fld_comment.replace(/&/g, "&amp;").replace(/>/g, "&gt;").replace(/</g, "&lt;").replace(/"/g, "&quot;").replace(/'/g,"&apos;");
+        $("#myName").html(data[0].fld_firstname + " " + data[0].fld_lastname + " (" + data[0].fld_username + ")");
+        whoCommented = data[0].fld_username;
+        $("#myRank").html(data[0].fld_rank);
+        $("#myTime").html(data[0].fld_timestamp);
+        $("#myComment").html(comment);
+        localStorage.setItem("commentator",data[0].fld_id);
+        checkConn();
+      }); 
+    }
+    connText = "";
+    function checkConn() {
+      $.getJSON("https://pythomy-staging.000webhostapp.com/_pythomy/check_conn.php?from=" + localStorage.getItem("id") + "&to=" + localStorage.getItem("commentator"),function(data){
+        if (parseInt(data[0].fld_accepted) == 0)
+          connText = "&nbsp;&nbsp;Connect";
+        else if (parseInt(data[0].fld_accepted) == 10) {
+          if (whoCommented != localStorage.getItem("username")) {
+            connText = "&nbsp;&nbsp;Waiting to accept connection request...";
+          } else {
+            connText = "";
+          }
+        }
+        else if (parseInt(data[0].fld_accepted) == 1)
+          connText = "&nbsp;&nbsp;Connected";
+
+        $("#connLink").html(connText)
+      });
+    }
+    function makeConnect() {
+      if (connText == "&nbsp;&nbsp;Connect") {
+        $.post("https://pythomy-staging.000webhostapp.com/_pythomy/make_connect.php",JSON.stringify({fld_connectedby:parseInt(localStorage.getItem("id")),fld_connectedto:parseInt(localStorage.getItem("commentator"))}),function(data){
+          checkConn();
+        });
+      }  
+    }
+    function noOfHonors(id) {
+      $.getJSON("https://pythomy-staging.000webhostapp.com/_pythomy/noofhonors.php?id="+id,function(data){
+        $("#myHonors").html("This comment has <b>" + data[0].no_of_honors + "</b> honors.");
+      });
+    }
+    isHonored = 0;
+    function ifHonored(comment,user) {
+      localStorage.setItem("myCommentId",comment);
+      localStorage.setItem("honoredby",user);
+      $.getJSON("https://pythomy-staging.000webhostapp.com/_pythomy/honored.php?comment="+comment+"&user="+user,function(data){
+        if (parseInt(data[0].no_of_honors) >= 1) {
+          $("#btnEvaluate").html("<i class='material-icons prefix'>star_border</i>&nbsp;&nbsp;Dishonor");
+          isHonored = 1;
+        } else {
+          $("#btnEvaluate").html("<i class='material-icons prefix'>star</i>&nbsp;&nbsp;Honor");
+          isHonored = 0;
+        }
+        document.getElementById("btnEvaluate").className = "btn waves-effect waves-light btn-large";
+        $("#btnEvaluate").show();
+      });
+    }
+    honorData = {};
+    scoreData = {};
+    function evaluateComment() {
+      if (whoCommented == localStorage.getItem("username")) {
+        window.alert("You can't honor your own comment. Thank you for the input.");
+      } else {
+        document.getElementById("btnEvaluate").className = "btn waves-effect waves-light btn-large disabled";
+        if (isHonored == 0) {
+          honorData = JSON.stringify({
+            fld_commentid:parseInt(localStorage.getItem("myCommentId")),
+            fld_honoredby:parseInt(localStorage.getItem("honoredby"))
+          });
+          window.alert("Honoring for a few seconds...");
+          $.post("https://pythomy-staging.000webhostapp.com/_pythomy/honor.php",honorData,function(data){
+            if (data.status == "Created") {
+              $.getJSON("https://pythomy-staging.000webhostapp.com/_pythomy/selectscore.php?id="+localStorage.getItem("commentator"),function(data){
+                scoreData = JSON.stringify({
+                  fld_id:parseInt(localStorage.getItem("commentator")),
+                  fld_score:30 + parseInt(data[0].fld_score)
+                });
+                $.post("https://pythomy-staging.000webhostapp.com/_pythomy/updatescore.php",scoreData,function(data){
+                  if (data.status == "Created") {
+                    ifHonored(localStorage.getItem("myCommentId"),localStorage.getItem("honoredby"));
+                    noOfHonors(localStorage.getItem("myCommentId"));
+                  } else {
+                    window.alert("Something went wrong in updating the score of who commented. Please try again. Thank you.");
+                    document.getElementById("btnEvaluate").className = "btn waves-effect waves-light btn-large";
+                  }
+                });
+              });
+            } else {
+              window.alert("Something went wrong in honoring. Please try again. Thank you.");
+              document.getElementById("btnEvaluate").className = "btn waves-effect waves-light btn-large";
+            }
+          }); 
+        } else {
+          window.alert("Dishonoring for a few seconds...");
+          $.getJSON("https://pythomy-staging.000webhostapp.com/_pythomy/dishonor.php?comment="+localStorage.getItem("myCommentId")+"&user="+localStorage.getItem("honoredby"),function(data){
+            if (data.status == "Accepted") {
+              $.getJSON("https://pythomy-staging.000webhostapp.com/_pythomy/selectscore.php?id="+localStorage.getItem("commentator"),function(data){
+                scoreData = JSON.stringify({
+                  fld_id:parseInt(localStorage.getItem("commentator")),
+                  fld_score:parseInt(data[0].fld_score) - 30
+                });
+                $.post("https://pythomy-staging.000webhostapp.com/_pythomy/updatescore.php",scoreData,function(data){
+                  if (data.status == "Created") {
+                    ifHonored(localStorage.getItem("myCommentId"),localStorage.getItem("honoredby"));
+                    noOfHonors(localStorage.getItem("myCommentId"));
+                  } else {
+                    window.alert("Something went wrong in updating the score of who commented. Please try again. Thank you.");
+                    document.getElementById("btnEvaluate").className = "btn waves-effect waves-light btn-large";
+                  }
+                });
+              });
+            } else {
+              window.alert("Something went wrong in dishonoring. Please try again. Thank you.");
+              document.getElementById("btnEvaluate").className = "btn waves-effect waves-light btn-large";
+            }
+          });
+        }
+      }
+    }
+    function dataOfBoard() {
+      $.getJSON("https://pythomy-staging.000webhostapp.com/_pythomy/yourrank.php?id=" + parseInt(localStorage.getItem("id")),function(data){
+        if (data[0].fld_rank == "Shadow") {
+          $("#rankImg").attr("src","images/RankBadges/shadows.png");
+          $("#myRank").html("Shadow Kids".toUpperCase());
+          myRank = "Shadow";
+        } else if (data[0].fld_rank == "Bronze") {
+          $("#rankImg").attr("src","images/RankBadges/bronze.png");
+          $("#myRank").html("Bronze Troopers".toUpperCase());
+          myRank = "Bronze";
+        } else if (data[0].fld_rank == "Silver") {
+          $("#rankImg").attr("src","images/RankBadges/silver.png");
+          $("#myRank").html("Silver Knights".toUpperCase());
+          myRank = "Silver";
+        } else if (data[0].fld_rank == "Gold") {
+          $("#rankImg").attr("src","images/RankBadges/gold.png");
+          $("#myRank").html("Golden Priests".toUpperCase());
+          myRank = "Gold";
+        } else if (data[0].fld_rank == "Platinum") {
+          $("#rankImg").attr("src","images/RankBadges/platinum.png");
+          $("#myRank").html("Platinum Kings".toUpperCase());
+          myRank = "Platinum";
+        }
+        $("#pps").html(data[0].fld_score + " PPS");
+        $.getJSON("https://pythomy-staging.000webhostapp.com/_pythomy/leaderboard.php?rank=" + myRank,function(data){
+          $("#board").empty();
+          for (i = 0; i < data.length; i++) {
+            if (data[i].fld_username == localStorage.getItem("username")) {
+              $("#board").append("<tr>" + "<td><b>" + (i + 1) + "</b></td>" + "<td><b>" + data[i].fld_username + "</b></td>" + "<td><b>" + data[i].fld_score + "</b></td>" + "</tr>");
+            } else {
+              $("#board").append("<tr>" + "<td>" + (i + 1) + "</td>" + "<td>" + data[i].fld_username + "</td>" + "<td>" + data[i].fld_score + "</td>" + "</tr>");
+            }
+          }
+        });
+      });
+      interval = setTimeout(() => {
+        dataOfBoard();
+      },5000);
+    }
+    function cantGoHere() {
+      window.alert("Can't go here yet.");
+    }
+    function clearAns() {
+      checkIfBlank();
+      yourAns = "";
+    }
+    function reportComment(id) {
+      localStorage.setItem("commentid",id);
+      $("#reportmodal").modal("open");
+    }
+    function checkIfValid() {
+      if (!$("#fld_reasonid").val() || $("#fld_message").val().trim() == "") {
+        document.getElementById("reportButton").className = "col s12 btn btn-large waves-effect darken-3 disabled";
+      } else {
+        document.getElementById("reportButton").className = "col s12 btn btn-large waves-effect darken-3";
+        $("#reportButton").css("background-color", "#0fbcf9");
+      }
+    }
+    function report() {
+      if ($("#fld_reasonid").val() && $("#fld_message").val().trim() != "") {
+        $.post("https://pythomy-staging.000webhostapp.com/_pythomy/report.php",JSON.stringify({
+          fld_commentid:parseInt(localStorage.getItem("commentid")),
+          fld_reportedby:parseInt(localStorage.getItem("id")),
+          fld_reason:parseInt($("#fld_reasonid").val()),
+          fld_message:$("#fld_message").val()
+          }),function(data){
+            if (data.status == "Created") {
+              window.alert("Report sent.");
+              $("#fld_reasonid").val("");
+              $("#fld_message").val("");
+              checkIfValid();
+              $('#fld_reasonid').formSelect();
+            } else {
+              window.alert("Something went wrong. Please try again.");
+            }
+        });
+      } else {
+        window.alert("Please fill up ALL REQUIRED (*) fields. Thank you.");
+      }
+    }
+    function viewComments() {
+      $("#comments").modal("open");
+      loadComments();
+    }
+    function loadComments(){
+      numberOfComments = 0;
+      $.getJSON("https://pythomy-staging.000webhostapp.com/_pythomy/noofcomments.php?id=17",function(data){
+        numberOfComments = data[0].no_of_comments;
+        $("#numberOfComments").html(data[0].no_of_comments + " Comment(s)");
+      });
+      $.getJSON("https://pythomy-staging.000webhostapp.com/_pythomy/comments.php?id=17",function(data){
+        $("#publicComments").empty();
+        if (data.length == 0) {
+          $("#publicComments").append("<li><p style='text-align:center;'><b>There are no comments yet. Be the first to comment now!</b></p></li>")
+        } else {
+          for (i = 0; i < data.length; i++) {
+            let comment = data[i].fld_comment.replace(/&/g, "&amp;").replace(/>/g, "&gt;").replace(/</g, "&lt;").replace(/"/g, "&quot;").replace(/'/g,"&apos;");
+            if (data[i].fld_id == localStorage.getItem("id")) {
+              $("#publicComments").append("<li>" + "<h6><b>" + data[i].fld_firstname + " " + data[i].fld_lastname + " (" + data[i].fld_email + ")" + "</b></h6>" + "<h6><b>" + data[i].fld_role + "</b></h6>" + "<h6><b>" + data[i].fld_timestamp + "</b></h6>" + "<p><span style='white-space: pre-line;'>" + comment + "</span></p>" + "<div class='row'><div class='col s12 m6 l6'><a class='btn waves-effect waves-light btn-small' style='background-color:goldenrod; font-size:16px;' onclick='displayEditCommentModal(" + data[i].fld_commentid + ",\"" + comment + "\")'>"+ "<i class='material-icons prefix'>create</i><span class='center'>Edit</span></a></div>" + "<div class='col s12 m6 l6'><a class='btn waves-effect waves-light btn-small' style='cursor:pointer; font-size:16px; background-color: #0fbcf9;' onclick='specComment(" + data[i].fld_commentid + ")')><i class='material-icons prefix'>settings</i><span class='center'>More...</span></a></div></div>" +"</li>" + "<div class='divider'></div>");
+            } else {
+              $("#publicComments").append("<li>" + "<h6><b>" + data[i].fld_firstname + " " + data[i].fld_lastname + " (" + data[i].fld_email + ")" + "</b></h6>" + "<h6><b>" + data[i].fld_role + "</b></h6>" + "<h6><b>" + data[i].fld_timestamp + "</b></h6>" + "<p><span style='white-space: pre-line;'>" + comment + "</span></p>" + "<div class='row'><div class='col s12 m6 l6'><a class='btn waves-effect waves-light btn-small' style='background-color:red; font-size:16px;' onclick='reportComment(" + data[i].fld_commentid + ")'>"+ "<i class='material-icons prefix'>report</i><span class='center'>Report</span></a></div>" + "<div class='col s12 m6 l6'><a class='btn waves-effect waves-light btn-small' style='cursor:pointer; font-size:16px; background-color: #0fbcf9;' onclick='specComment(" + data[i].fld_commentid + ")')><i class='material-icons prefix'>settings</i><span class='center'>More...</span></a></div></div>" +"</li>" + "<div class='divider'></div>");
+            }
+          }
+        }
+      });
+      interval = setTimeout(() => {
+        loadComments();
+      },5000);
+    }
+    function stopInterval() {
+      clearTimeout(interval);
+      interval = null;
+    }
+    yourAns = "";
+    forAns = "";
+    score = 0;
+    quizScore = 75;
+    rank = "";
+    rankData = {};
+    roleData = {};
+    function checkIfBlank() {
+      if ($("#forAns").val().trim() == "") {
+        document.getElementById("btnRun").className = "btn waves-effect waves-light btn-large disabled";
+        document.getElementById("btnSubmit").className = "btn waves-effect waves-light btn-large disabled";
+      } else {
+        document.getElementById("btnRun").className = "btn waves-effect waves-light btn-large";
+        document.getElementById("btnSubmit").className = isAnswered ? "btn waves-effect waves-light btn-large disabled" : "btn waves-effect waves-light btn-large";
+      }
+    }
+    function run() {
+      forAns = $("#forAns").val();
+      codes = JSON.stringify({
+        source:forAns,
+        lang:"python3"
+      });
+      window.alert('Running for at least 5 seconds...');
+      $.post("https://pythomy-staging.000webhostapp.com/_pythonapi/curl.php",codes,function(data){
+        setTimeout(function(){
+          $.getJSON("https://pythomy-staging.000webhostapp.com/_pythonapi/curl2.php?id=" + data.id,function(data){
+            if (data.stdout){
+              $("#forRun").html(data.stdout);
+              yourAns = data.stdout;
+            } else if (data.stderr) {
+              yourAns = "";
+              $("#forRun").html(data.stderr);
+            }
+            
+          });
+        },5000);
+      });
+    }
+    function runSub() {
+      forAns = $("#forAns").val();
+      codes = JSON.stringify({
+        source:forAns,
+        lang:"python3"
+      });
+      window.alert('Running and checking for at least 5 seconds...');
+      $.post("https://pythomy-staging.000webhostapp.com/_pythonapi/curl.php",codes,function(data){
+        setTimeout(function(){
+          $.getJSON("https://pythomy-staging.000webhostapp.com/_pythonapi/curl2.php?id=" + data.id,function(data){
+            if (data.stdout)
+              yourAns = data.stdout;
+            else
+              yourAns = "";
+            if (yourAns == "1\n4\n9\n16\n25\n36\n49\n64\n81\n100\n") {
+              correct = JSON.stringify({
+                cid:parseInt(localStorage.getItem("id")),
+                lid:17
+              });
+              $.post("https://pythomy-staging.000webhostapp.com/_pythomy/check.php",correct,function(data){
+                if (data.status == "OK") {
+                  $.getJSON("https://pythomy-staging.000webhostapp.com/_pythomy/selectscore.php?id=" + parseInt(localStorage.getItem("id")),function(data){
+                    score = parseInt(data[0].fld_score);
+                    $.post("https://pythomy-staging.000webhostapp.com/_pythomy/updatescore.php",JSON.stringify({fld_id:parseInt(localStorage.getItem("id")),fld_score:score + parseInt(quizScore)}),function(data){
+                      if (data.status == "Created") {
+                        if (score + quizScore >= 200 && score + quizScore <= 499) {
+                          rankData = {
+                            fld_id:parseInt(localStorage.getItem('id')),
+                            fld_rank:"Bronze"
+                          };
+                          rank = "Bronze";
+                        } else if (score + quizScore >= 500 && score + quizScore <= 749) {
+                          rankData = {
+                            fld_id:parseInt(localStorage.getItem('id')),
+                            fld_rank:"Silver"
+                          };
+                          rank = "Silver";
+                        } else if (score + quizScore >= 750 && score + quizScore <= 999) {
+                          rankData = {
+                            fld_id:parseInt(localStorage.getItem('id')),
+                            fld_rank:"Gold"
+                          };
+                          rank = "Gold";
+                        } else if (score + quizScore >= 1000) {
+                          rankData = {
+                            fld_id:parseInt(localStorage.getItem('id')),
+                            fld_rank:"Platinum"
+                          };
+                          rank = "Platinum";
+                        } else {
+                          window.alert("Correct! (+25 PPS)");
+                          window.alert("Congratulations! You are now in the Functions section. (+50 PPS)");
+                          window.location.href = 'functions.html';
+                        }
+                        $.post("https://pythomy-staging.000webhostapp.com/_pythomy/updaterank.php",JSON.stringify(rankData),function(data){
+                          if (rank == "Shadow" || rank == "Bronze" || rank == "Silver") {
+                            window.alert("Correct! (+25 PPS)");
+                            window.alert("Congratulations! You are now in the Functions section. (+50 PPS)");
+                            window.location.href = 'functions.html';
+                          } else if (rank == "Gold" || rank == "Platinum"){
+                            $.getJSON("https://pythomy-staging.000webhostapp.com/_pythomy/selectrole.php?cid=" + parseInt(localStorage.getItem("id")),function(data){
+                                if (data[0].fld_role == "Novice") {
+                                  roleData = {
+                                    fld_id:parseInt(localStorage.getItem("id")),
+                                    fld_role:"Expert"
+                                  }
+                                  $.post("https://pythomy-staging.000webhostapp.com/_pythomy/updaterole.php",JSON.stringify(roleData),function(data){
+                                    if (data.status == "Created") {
+                                      window.alert("Correct! (+25 PPS)");
+                                      window.alert("Congratulations! You are now in the Functions section. (+50 PPS)");
+                                      window.alert("Congratulations! You are now an expert.");
+                                      localStorage.setItem("role","Expert");
+                                      window.location.href = "fucntions.html";
+                                    }
+                                  });
+                                } else {
+                                  window.alert("Correct! (+25 PPS)");
+                                  window.alert("Congratulations! You are now in the Functions section. (+50 PPS)");
+                                  window.location.href = 'functions.html';
+                                }
+                            });
+                          }
+                        });
+                      }
+                    });
+                  });
+                  
+                }
+              });
+            } else {
+                yourAns = "";
+                window.alert("Incorrect!");
+                document.getElementById("btnSubmit").className = "btn waves-effect waves-light btn-large";
+            }
+          });
+        },5000);
+      });
+      
+    }
+    function submit() {
+      document.getElementById("btnSubmit").className = "btn waves-effect waves-light btn-large disabled";
+      correct = JSON.stringify({
+        cid:parseInt(localStorage.getItem("id")),
+        lid:17
+      });
+      if (!yourAns || yourAns == "") {
+        runSub();
+      } else {
+        if (yourAns == "1\n4\n9\n16\n25\n36\n49\n64\n81\n100\n") {
+          $.post("https://pythomy-staging.000webhostapp.com/_pythomy/check.php",correct,function(data){
+            if (data.status == "OK") {
+              $.getJSON("https://pythomy-staging.000webhostapp.com/_pythomy/selectscore.php?id=" + parseInt(localStorage.getItem("id")),function(data){
+                    score = parseInt(data[0].fld_score);
+                    $.post("https://pythomy-staging.000webhostapp.com/_pythomy/updatescore.php",JSON.stringify({fld_id:parseInt(localStorage.getItem("id")),fld_score:score + parseInt(quizScore)}),function(data){
+                      if (data.status == "Created") {
+                        if (score + quizScore >= 200 && score + quizScore <= 499) {
+                          rankData = {
+                            fld_id:parseInt(localStorage.getItem('id')),
+                            fld_rank:"Bronze"
+                          };
+                          rank = "Bronze";
+                        } else if (score + quizScore >= 500 && score + quizScore <= 749) {
+                          rankData = {
+                            fld_id:parseInt(localStorage.getItem('id')),
+                            fld_rank:"Silver"
+                          };
+                          rank = "Silver";
+                        } else if (score + quizScore >= 750 && score + quizScore <= 999) {
+                          rankData = {
+                            fld_id:parseInt(localStorage.getItem('id')),
+                            fld_rank:"Gold"
+                          };
+                          rank = "Gold";
+                        } else if (score + quizScore >= 1000) {
+                          rankData = {
+                            fld_id:parseInt(localStorage.getItem('id')),
+                            fld_rank:"Platinum"
+                          };
+                          rank = "Platinum";
+                        } else {
+                          window.alert("Correct! (+25 PPS)");
+                          window.alert("Congratulations! You are now in the Functions section. (+50 PPS)");
+                          window.location.href = 'functions.html';
+                        }
+                        $.post("https://pythomy-staging.000webhostapp.com/_pythomy/updaterank.php",JSON.stringify(rankData),function(data){
+                          if (rank == "Shadow" || rank == "Bronze" || rank == "Silver") {
+                            window.alert("Correct! (+25 PPS)");
+                            window.alert("Congratulations! You are now in the Functions section. (+50 PPS)");
+                            window.location.href = 'functions.html';
+                          } else if (rank == "Gold" || rank == "Platinum"){
+                            $.getJSON("https://pythomy-staging.000webhostapp.com/_pythomy/selectrole.php?cid=" + parseInt(localStorage.getItem("id")),function(data){
+                                if (data[0].fld_role == "Novice") {
+                                  roleData = {
+                                    fld_id:parseInt(localStorage.getItem("id")),
+                                    fld_role:"Expert"
+                                  }
+                                  $.post("https://pythomy-staging.000webhostapp.com/_pythomy/updaterole.php",JSON.stringify(roleData),function(data){
+                                    if (data.status == "Created") {
+                                      window.alert("Correct! (+25 PPS)");
+                                      window.alert("Congratulations! You are now in the Functions section. (+50 PPS)");
+                                      window.alert("Congratulations! You are now an expert.");
+                                      localStorage.setItem("role","Expert");
+                                      window.location.href = "for.html";
+                                    }
+                                  });
+                                } else {
+                                  window.alert("Correct! (+25 PPS)");
+                                  window.alert("Congratulations! You are now in the Functions section. (+50 PPS)");
+                                  window.location.href = 'functions.html';
+                                }
+                            });
+                          }
+                        });
+                      }
+                    });
+                });
+            }
+          });
+        } else {
+          yourAns = "";
+          window.alert("Incorrect!");
+          document.getElementById("btnSubmit").className = "btn waves-effect waves-light btn-large";
+        }
+      }
+    }
+    function postComment(){
+      data = JSON.stringify({
+        fld_userid:parseInt(localStorage.getItem("id")),
+        fld_lessonid:17,
+        fld_comment:$("#comment").val()
+      });
+      if ($("#comment").val() != "") {
+          $.post("https://pythomy-staging.000webhostapp.com/_pythomy/comment.php",data,function(){
+            $("#publicComments").empty();
+            $("#comment").val("");
+            loadComments();
+          });
+      } else {
+        window.alert("Comment shall not be empty.");
+      }
+    }
+    function sendMessage(){
+      data = JSON.stringify({
+        fld_cid:parseInt(localStorage.getItem("id")),
+        fld_msg:$("#myMsg").val()
+      });
+      if ($("#myMsg").val() != ""){
+          $.post("https://pythomy-staging.000webhostapp.com/_pythomy/send.php",data,function(data){
+            if (data.status == "Created") {
+              $("#myMsg").val("");
+              window.alert("Message sent.");
+            }
+          });
+        } else {
+          window.alert("Message shall not be empty.");
+      }
+    }
+    function logout() { 
+      localStorage.clear();
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+
+</html>

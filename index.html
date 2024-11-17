@@ -1,0 +1,1946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <!--
+  <meta name="description" content="A Cross Platform Python Programming Language Learning Management System using ES6 and TypeScript providing user-friendly lessons and comprehensive practice coding quizzes of the Python programming language & chance to talk to Python Programming experts"/>
+  <meta name="keywords" content="PythoMy,Python,Programming,Python Programming,Python Programming Language,Programming Language,Programming Tutorial,Programming Language Tutorial,Python Programming Language Tutorial,LMS,Learning Management System,Python LMS,Programming Learning Management System,Python Learning Management System,Python Programming Learning Management System,Computer Programming,Web Development,Scripting,Web Scripting,Scripting Language,Web Script,Script,PythoMy LMS,Mathematics,Math,TechnoRock,Arthur Tristan M. Ramos,Arthur Ramos,ArthurTristan Mancao Ramos,Arthur Tristan Mancao Ramos,Melner Balce">
+  <meta name="author" content="TechnoRock (Arthur Tristan M. Ramos - Full Stack Web and Mobile Application Developer)">
+  -->
+  <title>PythoMy</title>
+  <!-- CSS  -->
+  <link rel="icon" href="images/landing_images/pythomy.ico">
+  <link href="fonts/material_icons/material-icons.css" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="MaterialDesign-Webfont-master/css/materialdesignicons.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="MaterialDesign-Webfont-master/css/materialdesignicons.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link rel="stylesheet" type="text/css" href="css/commons.css">
+</head>
+<body>
+  <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container" style="width:100%;"><a id="logo-container" href="#loginmodal" class="brand-logo modal-trigger">
+        <div class="row">
+            <div class="col s1"><img src="images/landing_images/PythoMy Logo.png" width="60" height="60"></div>
+            <div class="col s1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PythoMy</div>
+        </div></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#home" class="no-dropdown">Home</a></li>
+        <li><a href="#services" class="no-dropdown">Services</a></li>
+        <li><a href="#contactus" class="no-dropdown">Contact Us</a></li>
+        <li><a href="#aboutus" class="no-dropdown">About Us</a></li>
+        <li><a data-target="loginmodal" class="modal-trigger no-dropdown">Log In</a></li>
+        <li><a data-target="registrationForm" class="modal-trigger no-dropdown">Register</a></li>
+        <li><a target="_blank" href="https://play.google.com/store/apps/details?id=io.ionic.starter20" class="no-dropdown"><img loading="lazy" style="width:150px; height: 50px; margin: 8px;" src="images/landing_images/google-play.png" alt="Download from Google Play"/></a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contactus">Contact Us</a></li>
+        <li><a href="#aboutus">About Us</a></li>
+        <li><a data-target="loginmodal" class="modal-trigger">Log In</a></li>
+        <li><a data-target="registrationForm" class="modal-trigger">Register</a></li>
+        <li><a target="_blank" href="https://play.google.com/store/apps/details?id=io.ionic.starter20"><img loading="lazy" style="width:125px; height: 50px; margin-bottom: 8px;" src="images/landing_images/google-play.png" alt="Download from Google Play"/></a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="tiny material-icons">menu</i></a>
+    </div>
+  </nav>
+  <div class="slider" id="home">
+    <ul class="slides">
+      <li>
+        <img loading="lazy" id="hero_img" src="images/landing_images/mark_ian.jpg"> <!-- random image -->
+        <div class="caption left-align">
+          <img loading="lazy" class="responsive-img brand-center-logo" src="images/landing_images/PythoMyx.png">
+          <a target="_blank" href="https://play.google.com/store/apps/details?id=io.ionic.starter20"><img loading="lazy" class="responsive-img" src="images/landing_images/google-play.png" style="width:125px; height: 50px;"></a>
+          <h5>Learn code the simplest way.</h5>
+          <h6 class="light grey-text text-lighten-3">Play. Learn. Code. CREATE!</h6><br>
+          <div class="row">
+            <div class="col s12 m12 l12">
+              <a data-target="lesson" class="btn waves-effect darken-3 modal-trigger" style="background-color: #0fbcf9!important; font-size:small!important;"><i class="material-icons" style="font-size:small!important;">book</i><span class="center-vertical-text" style="font-size:small!important;">Learn Code Now</span><i class="material-icons" style="font-size:small!important;">code</i></a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s12 m6 l6">
+              <a data-target="loginmodal" class="btn waves-effect darken-3 modal-trigger" style="background-color: #0fbcf9!important;"><i class="tiny material-icons prefix" style="font-size: small!important;">input</i><span class="center-vertical-text" style="font-size: small!important;">Login</span></a>
+            </div>
+            <div class="col s12 m6 l6">
+              <a data-target="registrationForm" class="btn waves-effect darken-3 modal-trigger" style="background-color: #0fbcf9!important;"><i class="tiny material-icons prefix" style="font-size: small!important;">mode_edit</i><span class="center-vertical-text" style="font-size: small!important;">Register</span></a>
+            </div>
+          </div>
+        </div>   
+      </li>
+    </ul>
+  </div>
+  <div class="container">
+    <div class="section">
+      <div class="row" id="services">
+        <div class="col s12 m12 l12">
+          <center><h2>Our Services</h2></center>
+          <div class="video-container">
+          	<center>
+            	<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/5lo5dE13sAU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </center>
+          </div>
+        </div>
+      </div>
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><i class="material-icons center-icon">book</i></h2>
+            <h5 class="center-h5">Easy to Learn</h5>
+            <p class="light">We provide you user-friendly and easy to learn <b>tutorial articles and coming soon videos</b> of lessons about the fundamentals of Programming using the <b>Python</b> Programming language, the only simple one closest to the English language.</p>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><i class="material-icons center-icon">code</i></h2>
+            <h5 class="center-h5">Learn Code by Instruction</h5>
+            <p class="light">Per lesson, we give quizzes where you can really practice coding because it provides an <b>online interpreter</b> wherein you solve the problems given to you. In those quizzes, we instruct step by step on how to code the specific output to easily do it successfully helping you to code great practically.</p>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><i class="material-icons center-icon">group</i></h2>
+            <h5 class="center-h5">Communicate for Help</h5>
+            <p class="light">Need help from fellow novices or from experts that have the expertise in what you are studying here? We have <b>Forums</b> and <b>Comments Section</b> in forums and topics for you to deliver your questions especially your difficulties in the study for them to help you and <b>Conversations with Novices or Experts</b> to directly deliver to them your concerns about your experiences in learning how to code.</p>
+          </div>
+        </div>
+      </div>
+      <h5>Mobile App Preview</h5>
+        <div class="video-container">
+        	<center>
+          		<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/iYRYn7cbCc4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          	</center>
+        </div>
+        <div class="carousel">
+          <a class="carousel-item" href="#one!"><img loading="lazy" src="images/screenshots/login.jpg" class="responsive-img"></a>
+          <a class="carousel-item" href="#two!"><img loading="lazy" src="images/screenshots/topics.jpg" class="responsive-img"></a>
+          <a class="carousel-item" href="#three!"><img loading="lazy" src="images/screenshots/topic.jpg" class="responsive-img"></a>
+          <a class="carousel-item" href="#four!"><img loading="lazy" src="images/screenshots/quiz.jpg" class="responsive-img"></a>
+          <a class="carousel-item" href="#five!"><img loading="lazy" src="images/screenshots/rank.jpg" class="responsive-img"></a>
+          <a class="carousel-item" href="#six!"><img loading="lazy" src="images/screenshots/forum.jpg" class="responsive-img"></a>
+          <a class="carousel-item" href="#seven!"><img loading="lazy" src="images/screenshots/honored.jpg" class="responsive-img"></a>
+          <a class="carousel-item" href="#eight!"><img loading="lazy" src="images/screenshots/convo.jpg" class="responsive-img"></a>
+        </div>  
+    </div>
+    <br><br>
+  </div>
+  <div class="container">
+    <div class="row" id="contactus">
+        <div class="col m10 offset-m1 s12">
+            <h2 class="center-align">Contact Us</h2>
+            <p class="center-align">Contact us via quick e-mail to send us your feedbacks and concerns about PythoMy by filling up this form.</p>
+            <div class="row">
+                    <div class="row">
+                        <div class="input-field col m6 s12">
+                            <i class="material-icons prefix">person</i>
+                            <input id="contact_first_name" type="text" value="">
+                            <label for="contact_first_name">First Name</label>
+                        </div>
+                        <div class="input-field col m6 s12">
+                            <i class="material-icons prefix">person</i>
+                            <input id="contact_last_name" type="text" value="">
+                            <label for="contact_last_name">Last Name</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                          <i class="material-icons prefix">email</i>
+                           <input id="contact_email" type="email" value="" class="validate">
+                            <label for="contact_email">Email Address<sup>*</sup></label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                           <i class="material-icons prefix">message</i>
+                          <textarea id="contact_message" value="" class="materialize-textarea validate"></textarea>
+                          <label for="contact_message">Message<sup>*</sup></label>
+                        </div>
+                    </div>
+                    <div class="row">
+                      <div class="col s12">
+                        <a class="btn waves-effect waves-light btn-large" id="btnContactUs">Send Message</a>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col s6"><i class="material-icons prefix" style="font-size:14px;">email</i> <a href="mailto:pythomy@gmail.com" target="_blank">pythomy@gmail.com</a></div>
+                      <div class="col s6"><i class="material-icons prefix" style="font-size:14px;">phone_iphone</i> <a href="tel:+639999035977" target="_blank">+639999035977</a></div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+  <footer class="page-footer light-blue">
+    <div class="container">
+      <div class="row" id="aboutus">
+          <h5 class="white-text">User Reviews from Google Play</h5>
+          <div class="row">
+            <div class="col s12 m12 l12">
+              <div class="card white">
+                <div class="card-content black-text" id="carousel-container">
+                  <div class="carousel review-carousel carousel-slider" style="display:flex; align-items: center;">
+                    <div class="carousel-item white black-text" href="#one!">
+                      <div class="row" style="display:flex; align-items: center;">
+                        <div class="col s12 m6 l6">
+                          <img loading="lazy" class="circle" style="width:50%!important; display: block; margin-left: auto; margin-right: auto;" src="images/landing_images/NoGoodRinoa.png" alt="NoGoodRinoa">
+                        </div>
+                        <div class="col s12 m6 l6" style="margin: auto;">
+                          <p>
+                            <b style="padding-right: 4px;">NoGoodRinoa</b><br>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                          </p>
+                          <i style="padding-top: 8px;">Amazing learning app I've used so far, the controls are very responsive. The lessons are well explained and all the topics needed to be learn are in the app, this will help not only those who wants to learn the language but also those who are totally beginners to programming. The Ranking system is also great that makes all the users excited to do more. Good job, Dev!</i>
+                          
+                        </div>
+                      </div>
+                    </div>
+                    <div class="carousel-item white black-text" href="#two!">
+                      <div class="row" style="display: flex; align-items: center;">
+                        <div class="col s6 m6 l6">
+                          <img loading="lazy" class="circle" style="width:50%!important; display: block; margin-left: auto; margin-right: auto;" src="images/landing_images/andre.png" alt="Andre Mallari">
+                        </div>
+                        <div class="col s6 m6 l6" style="margin: auto;">
+                          <p>
+                            <b style="padding-right: 4px;">Andre Mallari</b><br>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                          </p>
+                          <i style="padding-top: 8px;">Loaded with features! Huge upside with it's potential and through time I'm sure it will only get better. Kudos to the dev!!</i>
+                          
+                        </div>
+                      </div>
+                    </div>
+                    <div class="carousel-item white black-text" href="#three!">
+                      <div class="row" style="display:flex; align-items: center;">
+                        <div class="col s6 m6 l6">
+                          <img loading="lazy" class="circle" style="width:50%!important; display: block; margin-left: auto; margin-right: auto;" src="images/landing_images/JD.png" alt="John Dominic Pagot">
+                        </div>
+                        <div class="col s6 m6 l6" style="margin: auto;">
+                          <p>
+                            <b style="padding-right: 4px;">John Dominic Pagot</b><br>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                          </p>
+                          <i style="padding-top: 8px;">Easy to learn because the instructions are easy to understand</i>
+                          
+                        </div>
+                      </div>
+                    </div>
+                    <div class="carousel-item white black-text" href="#four!">
+                      <div class="row" style="display:flex; align-items: center;">
+                        <div class="col s6 m6 l6">
+                          <img loading="lazy" class="circle" style="width:50%!important; display: block; margin-left: auto; margin-right: auto;" src="images/landing_images/Oscar.png" alt="Oscar Abrajano">
+                        </div>
+                        <div class="col s6 m6 l6" style="margin: auto;">
+                          <p>
+                            <b style="padding-right: 4px;">Oscar Abrajano</b><br>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                          </p>
+                          <i style="padding-top: 8px;">Talented, brilliant, incredible, amazing, show-stopping, spectacular, never the same, totally unique, completely not ever been done before, kudos to the programmer!</i>
+                          
+                        </div>
+                      </div>
+                    </div>
+                    <div class="carousel-item white black-text" href="#five!">
+                      <div class="row" style="display:flex; align-items: center;">
+                        <div class="col s6 m6 l6">
+                          <img loading="lazy" class="circle" style="width:50%!important; display: block; margin-left: auto; margin-right: auto;" src="images/landing_images/Dexter.png" alt="Dexter Mallari">
+                        </div>
+                        <div class="col s6 m6 l6" style="margin: auto;">
+                          <p>
+                            <b style="padding-right: 4px;">Dexter Mallari</b><br>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                          </p>
+                          <i style="padding-top: 8px;">Clear explanations and examples, great questions. Really refreshed your knowledge about python programming.</i>
+                          
+                        </div>
+                      </div>
+                    </div>
+                    <div class="carousel-item white black-text" href="#six!">
+                      <div class="row" style="display:flex; align-items: center;">
+                        <div class="col s6 m6 l6">
+                          <img loading="lazy" class="circle" style="width:50%!important; display: block; margin-left: auto; margin-right: auto;" src="images/landing_images/kangkong.png" alt="Kangkong">
+                        </div>
+                        <div class="col s6 m6 l6" style="margin: auto;">
+                          <p>
+                            <b style="padding-right: 4px;">Kangkong</b><br>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                          </p>
+                          <i style="padding-top: 8px;">It's an app that will greatly help you in learning python while in mobile, definitely helpful! Deserves 5stars</i>
+                          
+                        </div>
+                      </div>
+                    </div>
+                    <div class="carousel-item white black-text" href="#seven!">
+                      <div class="row" style="display:flex; align-items: center;">
+                        <div class="col s6 m6 l6">
+                          <img loading="lazy" style="width:50%!important; display: block; margin-left: auto; margin-right: auto;" src="images/landing_images/Unknown User.png" alt="Kangkong">
+                        </div>
+                        <div class="col s6 m6 l6" style="margin: auto;">
+                          <p>
+                            <b style="padding-right: 4px;">Identity hidden based on his/her preference</b><br>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                          </p>
+                          <i style="padding-top: 8px;">It's a very educational app for relearning your knowledge in python, and the interface is user friendly</i> 😊 <i>instructions are indeed very clear</i>
+                          
+                        </div>
+                      </div>
+                    </div>
+                    <div class="carousel-item white black-text" href="#eight!">
+                      <div class="row" style="display:flex; align-items: center;">
+                        <div class="col s6 m6 l6">
+                          <img loading="lazy" class="circle" style="width:50%!important; display: block; margin-left: auto; margin-right: auto;" src="images/landing_images/Tonyo.png" alt="Tonyo">
+                        </div>
+                        <div class="col s6 m6 l6" style="margin: auto;">
+                          <p>
+                            <b style="padding-right: 4px;">Tonyo</b><br>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                          </p>
+                          <i style="padding-top: 8px;">Great app for those who wants to learn python language</i>
+                          
+                        </div>
+                      </div>
+                    </div>
+                    <div class="carousel-item white black-text" href="#nine!">
+                      <div class="row" style="display:flex; align-items: center;">
+                        <div class="col s6 m6 l6">
+                          <img loading="lazy" class="circle" style="width:50%!important; display: block; margin-left: auto; margin-right: auto;" src="images/landing_images/Diether.png" alt="Diether Llenares">
+                        </div>
+                        <div class="col s6 m6 l6" style="margin: auto;">
+                          <p>
+                            <b style="padding-right: 4px;">Diether Llenares</b><br>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                          </p>
+                          <i style="padding-top: 8px;">Easy to use and highly informative</i>
+                          
+                        </div>
+                      </div>
+                    </div>
+                    <div class="carousel-item white black-text" href="#ten!">
+                      <div class="row" style="display:flex; align-items: center;">
+                        <div class="col s6 m6 l6">
+                          <img loading="lazy" class="circle" style="width:50%!important; display: block; margin-left: auto; margin-right: auto;" src="images/landing_images/Edwin.png" alt="John Edwin Serrano">
+                        </div>
+                        <div class="col s6 m6 l6" style="margin: auto;">
+                          <p>
+                            <b style="padding-right: 4px;">John Edwin Serrano</b><br>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                          </p>
+                          <i style="padding-top: 8px;">This application is very helpful for those beginners want to learn Python Programming. 5 Stars for this app</i><span>❣️</span>
+                          
+                        </div>
+                      </div>
+                    </div>
+                    <div class="carousel-item white black-text" href="#eleven!">
+                      <div class="row" style="display:flex; align-items: center;">
+                        <div class="col s6 m6 l6">
+                          <img loading="lazy" class="circle" style="width:50%!important; display: block; margin-left: auto; margin-right: auto;" src="images/landing_images/juliusEnriquez.jpg" alt="Julius Enriquez">
+                        </div>
+                        <div class="col s6 m6 l6" style="margin: auto;">
+                          <p>
+                            <b style="padding-right: 4px;">Julius Enriquez</b><br>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                          </p>
+                          <i style="padding-top: 8px;">A good app especially for those who wants to learn python. A well developed learning platform :) Kudos to the developer :) Keep up the good work and happy coding :)</i>
+                          
+                        </div>
+                      </div>
+                    </div>
+                    <div class="carousel-item white black-text" href="#twelve!">
+                      <div class="row" style="display:flex; align-items: center;">
+                        <div class="col s6 m6 l6">
+                          <img loading="lazy" class="circle" style="width:50%!important; display: block; margin-left: auto; margin-right: auto;" src="images/landing_images/kirah.jpg" alt="Kirah">
+                        </div>
+                        <div class="col s6 m6 l6" style="margin: auto;">
+                          <p>
+                            <b style="padding-right: 4px;">Kirah</b><br>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                          </p>
+                          <i style="padding-top: 8px;">Good job to the devs! Very good! I learned so much with this app!</i>
+                          
+                        </div>
+                      </div>
+                    </div>
+                    <div class="carousel-item white black-text" href="#thirteen!">
+                      <div class="row" style="display:flex; align-items: center;">
+                        <div class="col s6 m6 l6">
+                          <img loading="lazy" class="circle" style="width:50%!important; display: block; margin-left: auto; margin-right: auto;" src="images/landing_images/JonSnow.png" alt="Jon Snow">
+                        </div>
+                        <div class="col s6 m6 l6" style="margin: auto;">
+                          <p>
+                            <b style="padding-right: 4px;">Jon Snow</b><br>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                          </p>
+                          <i style="padding-top: 8px;">From zero to hero!</i>
+                          
+                        </div>
+                      </div>
+                    </div>
+                    <div class="carousel-item white black-text" href="#fourteen!">
+                      <div class="row" style="display:flex; align-items: center;">
+                        <div class="col s6 m6 l6">
+                          <img loading="lazy" class="circle" style="width:50%!important; display: block; margin-left: auto; margin-right: auto;" src="images/landing_images/Xjex.png" alt="Xavier Joseph Manaloto">
+                        </div>
+                        <div class="col s6 m6 l6" style="margin: auto;">
+                          <p>
+                            <b style="padding-right: 4px;">Xavier Joseph Manaloto</b><br>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                          </p>
+                          <i style="padding-top: 8px;">knowlegable app</i>
+                          
+                        </div>
+                      </div>
+                    </div>
+                    <div class="carousel-item white black-text" href="#fifteen!">
+                      <div class="row" style="display:flex; align-items: center;">
+                        <div class="col s6 m6 l6">
+                          <img loading="lazy" class="circle" style="width:50%!important; display: block; margin-left: auto; margin-right: auto;" src="images/landing_images/dev-owen.jpg" alt="Owen Jasper Vargas">
+                        </div>
+                        <div class="col s6 m6 l6" style="margin: auto;">
+                          <p>
+                            <b style="padding-right: 4px;">Owen Jasper Vargas</b><br>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                          </p>
+                          <i style="padding-top: 8px;">Very nice application!!!</i>
+                          
+                        </div>
+                      </div>
+                    </div>
+                    <div class="carousel-item white black-text" href="#sixteen!">
+                      <div class="row" style="display:flex; align-items: center;">
+                        <div class="col s6 m6 l6">
+                          <img loading="lazy" class="circle" style="width:50%!important; display: block; margin-left: auto; margin-right: auto;" src="images/landing_images/john kohn.png" alt="John Kohn">
+                        </div>
+                        <div class="col s6 m6 l6" style="margin: auto;">
+                          <p>
+                            <b style="padding-right: 4px;">John Kohn</b><br>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                          </p>
+                          <i style="padding-top: 8px;">Nicest</i>
+                          
+                        </div>
+                      </div>
+                    </div>
+                    <div class="carousel-item white black-text" href="#seventeen!">
+                      <div class="row" style="display:flex; align-items: center;">
+                        <div class="col s6 m6 l6">
+                          <img loading="lazy" class="circle" style="width:50%!important; display: block; margin-left: auto; margin-right: auto;" src="images/landing_images/Cabs.png" alt="Justin Cabrera">
+                        </div>
+                        <div class="col s6 m6 l6" style="margin: auto;">
+                          <p>
+                            <b style="padding-right: 4px;">Justin Cabrera</b><br>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star</i>
+                            <i class="tiny material-icons" style="color:#8d9d29; padding-right: 0px;">star_border</i>
+                          </p>
+                          <i style="padding-top: 8px;">The app has this simple yet effective way of teaching stuff. I like how the app motivates the users to learn by having a simple ranking system. Looking forward for more updates!</i>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          </div>  
+          <h5 class="white-text">About the Team</h5>
+          <div class="carousel carousel-slider center">
+            <div class="carousel-item #0fbcf9 white-text" href="#one!">
+              <center><img loading="lazy" class="circle" src="images/landing_images/dev-arthur.png" alt="Dev Arthur"></center>
+              <h6 class="team-member center-vertical-text"><b>ARTHUR TRISTAN M. RAMOS</b><a href="https://www.linkedin.com/in/dev-arthur-tristan-ramos/" target="_blank" class="waves-effect waves-light blue darken-3" style="margin-left: 4px; margin-bottom: 4px; padding: 2px; font-size: inherit; color: white;"><i class="mdi mdi-linkedin"></i></a></h6>
+              <p class="team-member">Full Stack Mobile and Web Application Developer</p>
+            </div>
+            <div class="carousel-item #0fbcf9 white-text" href="#two!">
+              <center><img loading="lazy" class="circle" src="images/landing_images/adviser-mel.png" alt="Adviser Mel"></center>
+              <h6 class="team-member"><b>MELNER BALCE</b></h6>
+              <p class="team-member">Project Adviser</p>
+            </div>
+            <div class="carousel-item #0fbcf9 white-text" href="#five!">
+              <center><img class="circle" src="images/landing_images/xavier.jpg" alt="Product Owner Xavier"></img></center>
+              <h6 class="team-member"><b>XAVIER JOSEPH P. MANALOTO</b></h6>
+              <p class="team-member">Product Owner</p>
+            </div>
+            <div class="carousel-item #0fbcf9 white-text" href="#three!">
+              <center><img loading="lazy" class="circle" src="images/landing_images/dev-owen.jpg" alt="Product Owner Owen"></center>
+              <h6 class="team-member"><b>OWEN JASPER VARGAS</b></h6>
+              <p class="team-member">Product Owner</p>
+            </div>
+            <div class="carousel-item #0fbcf9 white-text" href="#four!">
+              <center><img loading="lazy" class="circle" src="images/landing_images/dev-jovan.png" alt="Product Owner Jovan"></center>
+              <h6 class="team-member"><b>JOVAN M. VILLAFLORES</b></h6>
+              <p class="team-member">Product Owner</p>
+            </div>
+            <div class="carousel-item #0fbcf9 white-text" href="#five!">
+              <center><img class="circle" src="images/landing_images/adviser-shirley.png" alt="Product Adviser Shirley"></img></center>
+              <h6 class="team-member"><b>SHIRLEY T. ANCIRO</b></h6>
+              <p class="team-member">Product Adviser</p>
+            </div>
+            <div class="carousel-item #0fbcf9 white-text" href="#six!">
+              <center><img class="circle" src="images/landing_images/designer-candz.png" alt="Graphics Designer Candisse"></img></center>
+              <h6 class="team-member"><b>CANDISSE JOI PEDROSO</b></h6>
+              <p class="team-member">Graphics & UI/UX Designer, Content Manager</p>
+            </div>
+            <div class="carousel-item #0fbcf9 white-text" href="#seven!">
+              <center><img class="circle" src="images/landing_images/graduate-via.png" alt="Graphics Designer Via"></img></center>
+              <h6 class="team-member"><b>VIA GRAZIELLE TORRES</b></h6>
+              <p class="team-member">Graphics Designer, Quality Assurance Engineer</p>
+            </div>
+            <div class="carousel-item #0fbcf9 white-text" href="#eight!">
+              <center><img class="circle" src="images/landing_images/nephylin.png" alt="Graphics Designer Nephylin"></img></center>
+              <h6 class="team-member"><b>NEPHYLIN G. SAPIN</b></h6>
+              <p class="team-member">Graphics Designer</p>
+            </div>
+            <div class="carousel-item #0fbcf9 white-text" href="#nine!">
+              <center><img class="circle" src="images/landing_images/tester-hanna.png" alt="Tester Hanna"></img></center>
+              <h6 class="team-member"><b>HANNA HILARIO</b></h6>
+              <p class="team-member">Quality Assurance Engineer</p>
+            </div>
+            <div class="carousel-item #0fbcf9 white-text" href="#ten!">
+              <center><img class="circle" src="images/landing_images/jaykim.png" alt="Tester Jaykim"></img></center>
+              <h6 class="team-member"><b>JAYKIM FONTILA</b></h6>
+              <p class="team-member">Quality Assurance Engineer</p>
+            </div>
+            <div class="carousel-item #0fbcf9 white-text" href="#eleven!">
+              <center><img class="circle" src="images/landing_images/graduate-lawrenz.png" alt="Tester Lawrenz"></img></center>
+              <h6 class="team-member"><b>LAWRENZ SESE DIESTRO</b></h6>
+              <p class="team-member">Quality Assurance Engineer</p>
+            </div>
+            <div class="carousel-item #0fbcf9 white-text" href="#twelve!">
+              <center><img class="circle" src="images/landing_images/graduate-austin.jpg" alt="Tester Austin"></img></center>
+              <h6 class="team-member"><b>AUSTIN RAY ARANDA</b></h6>
+              <p class="team-member">Quality Assurance Engineer</p>
+            </div>
+            <div class="carousel-item #0fbcf9 white-text" href="#thirteen!">
+              <center><img class="circle" src="images/landing_images/john-edwin.png" alt="Tester Edwin"></img></center>
+              <h6 class="team-member"><b>JOHN EDWIN SERRANO</b></h6>
+              <p class="team-member">Quality Assurance Engineer</p>
+            </div>
+            <div class="carousel-item #0fbcf9 white-text" href="#fourteen!">
+              <center><img class="circle" src="images/landing_images/denver.jpg" alt="Tester Denver"></img></center>
+              <h6 class="team-member"><b>DENVERSON F. CAACBAY</b></h6>
+              <p class="team-member">Quality Assurance Engineer</p>
+            </div>
+            <div class="carousel-item #0fbcf9 white-text" href="#fifteen!">
+              <center><img class="circle" src="images/landing_images/amiel.png" alt="Tester Amiel"></img></center>
+              <h6 class="team-member"><b>AMIEL RIOS</b></h6>
+              <p class="team-member">Quality Assurance Engineer</p>
+            </div>
+            <div class="carousel-item #0fbcf9 white-text" href="#sixteen!">
+              <center><img class="circle" src="images/landing_images/roland.png" alt="Tester Roland"></img></center>
+              <h6 class="team-member"><b>ROLAND JOSEPH G. FRANDO</b></h6>
+              <p class="team-member">Quality Assurance Engineer</p>
+            </div>
+          </div>
+          <p class="grey-text text-lighten-4">I am <b>Arthur Tristan M. Ramos</b>, a Bachelor of Science in Information Technology (BSIT) graduate and Cum Laude in Gordon College College of Computer Studies (CCS) Batch 2019 and the <b>Full Stack Developer</b>, who loves Programming/coding and aspires to teach you all someday how to code, developing this project advised by <b>Mr. Melner Balce</b>, a College of Computer Studies (CCS) instructor in this college and my <b>Project Adviser</b>, who helped me in the research, development and implementation of this project to help you learn the fundamentals of Programming easier and faster using Python as part of my Capstone Project.</p>
+          <p class="grey-text text-lighten-4">Late 2020, since late 2019 and early 2020, I have asked several people to test out the mobile application and website, I have recruited an addition of knowledgeable and passionate team members who along with the mentioned several people who tested the app and Website have helped improve the mobile app and website to help you learn Python code the simplest way we do since I can't do this just alone. I need some help to be my eyes and ears from the community we serve, you. Let's do help each other learn code the simplest way.</p> 
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      <center>Made by <a target="_blank" class="light-blue-text text-lighten-3" href="http://materializecss.com">Materialize</a> & Powered by TechnoRock |
+      <a href="#aboutusmodal" class="light-blue-text text-lighten-3 modal-trigger">Learn More</a> |
+      © <span id="currentYear"></span> TechnoRock. All Rights Reserved.
+
+      <h6>
+        <a href="https://www.facebook.com/pythomy/" target="_blank" class="waves-effect waves-light blue darken-4" style="margin-left: 4px; margin-bottom: 4px; font-size: inherit; color: white; padding: 4px;"><i class="mdi mdi-facebook-box"></i></a>
+
+        <span class="twitterXDiv">
+          <a href="https://twitter.com/pythomy" 
+          target="_blank" 
+          class="twitterXIcon waves-effect waves-light black lighten-3">
+            <img src="images/landing_images/twitterX.jpg"
+              class="twitterXImg"/>
+          </a>
+        </span>
+
+        <a href="https://www.instagram.com/pythomy/" target="_blank" class="waves-effect waves-light pink darken-1" style="margin-left: 4px; margin-bottom: 4px; font-size: inherit; color: white; padding: 4px;"><i class="mdi mdi-instagram"></i></a>
+        <a href="https://www.youtube.com/channel/UCha68QBkrgEEEo52tJmxFyg" target="_blank" class="waves-effect waves-light red darken-1"  style="margin-left: 4px; margin-bottom: 4px; font-size: inherit; color: white; padding: 4px;"><i class="mdi mdi-youtube"></i></a>
+      </h6>
+      <!-- Start of CuterCounter Code -->
+    <a href="http://www.cutercounter.com/" target="_blank"><img src="http://www.cutercounter.com/hit.php?id=gmmoanfk&nd=6&style=87" border="0" alt="visitor counter"></a>
+    </center>
+    <!-- End of CuterCounter Code -->
+      </div>
+    </div>
+  </footer>
+
+  <div id="privacypolicy" class="modal">
+      <div class="modal-content">
+        <h3>Privacy Policy</h3>
+        <div class="divider"></div>
+        <p>Last Updated: August 22, 2023</p>
+        <p>TechnoRock (subsidiary of Team Turtle Hack) operates PythoMy. This page informs you of our policies regarding the collection, use and disclosure of Personal Information we receive from users of the mobile app.</p>
+        <p>This privacy policy discloses the privacy practices for PythoMy. It applies solely to information collected by this Website. It will notify you of the following:</p>
+
+        <ol type="1">
+          <li>What personally identifiable information is collected from you through the website, how it is used and with whom it may be shared.</li>
+          <li>What choices are available to you regarding the use of your data.</li>
+          <li>The security procedures in place to protect the misuse of your information.</li>
+          <li>How you can correct any inaccuracies in the information.</li>
+        </ol>
+
+        <p>We use your Personal Information only for providing and improving the Website. By using the mobile app, you agree to the collection and use of information in accordance with this policy.</p>
+      
+        <h5>Information Collection, Use, and Sharing</h5>
+        <p>We are the sole owners of the information collected on this site. We only collect information that you voluntarily give us via Registration and Edit Profile, Ranking System, Quizzes you answer and Comments Section in each lesson you learn and finish from this app, Forums, Expert's Conventions, Seminars & Appointments, Monetary System for our experts (soon), Conversations with your connections (who are your fellow novices or experts), & Feedbacks and Concerns to our admin. We will not sell or rent this information to anyone.</p>
+        <p>While using our mobile application, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you. Personally identifiable information may include, but is not limited to your name, e-mail address, username you will use and your specified wished role in this application.</p>
+
+        <p>These are the data that will only be posted in public (and subject to <b>administrative purposes</b> like <b>data analytics and reporting</b> and <b>investigation</b> (especially if anything wrong involving it happens)) are <b>your</b>:</p>
+        <ol type="1">
+          <li><b>Full Name</b> (The combination of your <b>First Name</b> (Given Name) and <b>Last Name</b> (Surname))</li>
+          <li><b>E-mail Address</b> (The online address where we will send you e-mails for account verification and updates about the app)</li>
+          <li><b>Username</b> (Your alias name to be used in the app)</li>
+          <li><b>Role</b> in the application (<b>User</b> or <b>Expert</b>) (Your position in the app community)</li>
+          <li><b>Forums that you created</b> (Your questions or articles to be shared to the whole PythoMy community)</li>
+          <li><b>Comments in lesson(s) you have chosen to post in and forum(s) you are involved in</b> (Feedbacks and questions in lessons or forums)</li>
+          <li><b>Score and rank in the leaderboard</b> (Score used in ranking novices and experts to determine their rank (Placement in the community as user or expert))</li>
+          <li><b>Appointments, Seminars and Activities (posted by experts)</b> (Events conducted by experts)</li>
+          <li><b>Number of honors in your comments</b> (Prestige points for novices and/or experts; Experts earn money by the number of these honors)</li>
+        </ol>
+
+        <p>These data will not be posted in public. It will only be used for <b>administrative purposes</b> like <b>customer support</b>, <b>data analytics and reporting</b> and <b>verification</b>. These data are <b>your</b>:</p>
+        <ol type="1">
+          <li><b>Mobile Phone Number</b> (the number where we send SMS text messages especially for verification)</li>
+          <li><b>Quiz Results in each lesson (and your answer in the Expert Validation Quiz if you applied as expert)</b> (Results from answering quizzes in lessons and/or expert validation quiz)</li>
+          <li><b>Account Verification Status (by E-mail Address or Mobile Phone Number)</b> (Status if the e-mail address or mobile phone number that you have registered is verified or not)</li>
+        </ol>
+
+        <p>This data will not be posted in public. It will only be used for <b>investigation if needed especially if something suspicious and illegal happened in certain activities</b>:</p>
+        <ol type="1">
+          <li><b>Conversations with fellow novices, experts and/or the admin</b> (Your private messages with novices, experts and/or the admin)</li>
+        </ol>
+
+        <p>This data will never be posted anywhere. If you cannot access your account because you have lost/forgotten this, you can save your account access by changing this after you use <b>"I forgot my password."</b> Please make sure to secure this since you are highly responsible for the confidentiality of your account that will be used by you to access our Web and mobile application:</p>
+        <ol type="1">
+          <li><b>Your Password</b> (Your secret key in entering the application)</li>
+        </ol>
+
+        <p>We will use your information to respond to you regarding the reason you contacted us & to analyze your data and activities in our community we made in this application to learn from you on how to improve our product(s) and its services to you in the future. We will not share your information with any third party outside of our organization, other than as necessary to fulfill your request.</p>
+        <p>Unless you ask us not to, we may contact you via email and Feedbacks & Concerns in the future to tell you about specials, new products or services, or changes to this privacy policy.</p>
+        <p>Your account is lifetime unless you formally ask us to terminate it and its data involved with it.</p>
+      
+        <h5>Your Access to and Control Over Information</h5>
+        <p>You may opt out of any future contacts from us at any time. You can do the following at any time by contacting us via the email address or Feedbacks and Concerns given on our mobile app:</p>
+        <ul>
+          <li>See what data we have about you, if any.</li>
+          <li>Change/correct any data we have about you.</li>
+          <li>Have us delete any data we have about you.</li>
+          <li>Express any concern you have about our use of your data.</li>
+          <li>Express your feedback(s) and concern(s) about our product and its services to you.</li>
+        </ul>
+
+        <h5>Security</h5>
+        <p>The security of your Personal Information is important to us, but remember that no method of transmission over the Internet, or method of electronic storage, is 100% secure. While we strive to use commercially acceptable means to protect your Personal Information, we cannot guarantee its absolute security.</p>
+      
+        <h5>Changes To This Privacy Policy</h5>
+        <p>This Privacy Policy is effective as of August 22, 2023 and will remain in effect except with respect to any changes in its provisions in the future, which will be in effect immediately after being posted on this page.</p>
+        <p>We reserve the right to update or change our Privacy Policy at any time and you should check this Privacy Policy periodically. Your continued use of the Service after we post any modifications to the Privacy Policy on this page will constitute your acknowledgment of the modifications and your consent to abide and be bound by the modified Privacy Policy.</p>
+      
+        <h5>Contact Us</h5>
+        <p>If you have any questions about this Privacy Policy, please contact us via our <b>e-mail address</b> (<b>pythomy@gmail.com</b>) or <b>Feedbacks and Concerns</b> to directly message our admin.</p>
+      </div>
+
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+      </div>
+  </div>
+
+  <div id="usersandexpertsmodal" class="modal">
+    <div class="modal-content">
+      <h3>Novice</h3>
+      <div class="divider"></div>
+      <center><img loading="lazy" class="responsive-img" src="images/landing_images/phoneyellow.png" alt="Novice"></center>
+      <p>A <b>novice</b> is the <b>student</b> in this application. He/she learns how to code by reading the lessons and taking the quizzes via an online interpreter to finish all the lessons so he/she will fully understand Programming by using Python. He/she asks for help or helps others by commenting in the Comments Section, creating or participating in an open forum, or directly messaging fellow novices or experts. After earning large amounts of points or medals, he/she will be promoted as <b>Expert</b> wherein he/she will be <b>paid</b> someday while working as one of our experts.</p>
+      <h3>Expert</h3>
+      <div class="divider"></div>
+      <center><img loading="lazy" class="responsive-img" src="images/landing_images/teachdesign2.png" alt="Expert"></center>
+      <p>An expert is the <b>teacher</b> in this application. He/she looks in the lessons (with unlimited access) to review the lessons or use its Comments Section by commenting to help the novices in need while they are learning here how to code using Python. They are also privileged to help novices by directly messaging them or participate in an open forum created by them, a user or a fellow expert. They will <b>soon be paid money</b> by earning points and medals as expert based on the their help and its evaluation by novices.</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+    </div>
+  </div>
+  <div id="aboutusmodal" class="modal">
+    <div class="modal-content">
+      <h3>Mobile Application Powered by:</h3>
+      <div class="divider"></div><br>
+      <center><img class="responsive-img" loading="lazy" src="images/landing_images/ionic.png" alt="Ionic Framework"></center>
+      <p style="text-align: center;"><b>Ionic Framework (<a target="_blank" href="https://ionicframework.com/">https://ionicframework.com/</a>)</b></p>
+      <!--<p style="text-align: center;"><b>CLI Version:</b> 4.12.0</p>-->
+      <p style="text-align: center;"><b>Photo from:</b> <a target="_blank" href="https://ionicframework.com/">https://ionicframework.com/</a></p><br>
+      <h3>Website Powered by:</h3>
+      <div class="divider"></div><br>
+      <center><img class="responsive-img" loading="lazy" src="images/landing_images/WebTechPythoMy.png" alt="Web Technologies used in PythoMy"></center><br>
+      <h3>FAIR USE</h3>
+      <div class="divider"></div>
+      <p>Copyright Disclaimer under section 107 of the Copyright Act 1976, allowance is made for “fair use” for purposes such as criticism, comment, news reporting, teaching, scholarship, education and research.</p>
+      <p>Fair use is a use permitted by copyright statute that might otherwise be infringing.</p>
+      <p>Non-profit, educational or personal use tips the balance in favor of fair use.</p>
+      <p><b>U.S. COPYRIGHT OFFICE - FAIR USE DEFINITION: </b> <a target="_blank" href="http://www.copyright.gov/fair-use/more-info.html">http://www.copyright.gov/fair-use/more-info.html</a></p><br>
+      <h3>Credits and Copyrights to</h3>
+      <div class="divider"></div><br>
+      <center><a target="_blank" href="http://paiza.io/en"><img loading="lazy" class="responsive-img" src="images/landing_images/paiza_io_logo.png" alt="Logo of paiza.io"></a></center>
+      <p style="text-align: center;">For providing the API powered for our interpreter and for their logo used in this application</p><br>
+      <h3 text-wrap style="text-align: center;">Python Software Foundation</h3>
+      <div class="divider"></div><br>
+      <center><img loading="lazy" class="responsive-img" src="images/landing_images/python-logo.png" alt="Logo of Python"></center>
+      <p style="text-align: center;">For creating and providing the Programming language to be taught and for their logo used in this application</p><br>
+      <ul>
+        <li style="list-style-type: disc;">Method Overriding in Python. (2020, January 23). Retrieved from <a target="_blank" href="https://www.geeksforgeeks.org/method-overriding-in-python/">https://www.geeksforgeeks.org/method-overriding-in-python/</a></li>
+        <li style="list-style-type: disc;">Programming with Mosh (2018, November 14). What are Sets in Python? Python Tutorial for Absolute Beginners | Mosh. Retrieved from <a target="_blank" href="https://www.youtube.com/watch?v=t9j8lCUGZXo">https://www.youtube.com/watch?v=t9j8lCUGZXo</a></li>
+        <li style="list-style-type: disc;">Python Sets. (n.d.). Retrieved from <a target="_blank" href="https://www.programiz.com/python-programming/set">https://www.programiz.com/python-programming/set</a></li>
+        <li style="list-style-type: disc;">Python Tutorial. (n.d.). Retrieved from <a target="_blank" href="https://www.w3schools.com/python/default.asp">https://www.w3schools.com/python/default.asp</a></li>
+        <li style="list-style-type: disc;">Sullivan, W. (2018). Python Programming Illustrated for Beginners and Intermediates. Retrieved from <a target="_blank" href="http://python.healthypslife.com/">http://python.healthypslife.com/</a></li>
+      </ul>
+      <p>For being the references on how to create the lessons in our Web and mobile application</p><br>
+      <ul>
+        <li style="list-style-type: disc;">A Nice Pear</li>
+        <li style="list-style-type: disc;">Air Supply</li>
+        <li style="list-style-type: disc;">Atlantic Recording Corporation</li>
+        <li style="list-style-type: disc;">BMG Rights Management</li>
+        <li style="list-style-type: disc;">DC Comics, Inc.</li>
+        <li style="list-style-type: disc;">DEV</li>
+        <li style="list-style-type: disc;">EMI Records Ltd.</li>
+        <li style="list-style-type: disc;">Evanescence</li>
+        <li style="list-style-type: disc;">Fueled by Ramen LLC</li>
+        <li style="list-style-type: disc;">Godsmack</li>
+        <li style="list-style-type: disc;">Linkin Park</li>
+        <li style="list-style-type: disc;">Machine Shop Records</li>
+        <li style="list-style-type: disc;">Mars, Inc.</li>
+        <li style="list-style-type: disc;">Marvel Entertainment, LLC</li>
+        <li style="list-style-type: disc;">Mondelēz International, Inc.</li>
+        <li style="list-style-type: disc;">National Basketball Association (NBA)</li>
+        <li style="list-style-type: disc;">Nickelback</li>
+        <li style="list-style-type: disc;">Nintendo</li>
+        <li style="list-style-type: disc;">Paramore</li>
+        <li style="list-style-type: disc;">Puddle of Mudd</li>
+        <li style="list-style-type: disc;">Queen</li>
+        <li style="list-style-type: disc;">The Hershey Company</li>
+        <li style="list-style-type: disc;">The Pokémon Company</li>
+        <li style="list-style-type: disc;">Universal Music Canada</li>
+        <li style="list-style-type: disc;">Universal Republic</li>
+        <li style="list-style-type: disc;">Virgin EMI Records</li>
+        <li style="list-style-type: disc;">Warner Records Inc.</li>
+        <li style="list-style-type: disc;">World Wrestling Entertainment, Inc. (WWE)</li>
+      </ul>
+      <p>For the bands, characters, names, personalities, products, singers, songs, and Superstars used in this application</p><br>
+      <p><b>DISCLAIMER:</b> We do not have any affiliations with the mentioned bands, singers, products and companies. We uphold <b>FAIR USE</b> since this Website is only for <b>non-profit and educational purposes</b>.</p><br>
+      <p><b>App Logo Credits to:</b> Lexpeee</p>
+      <p><b>Artwork Illustrations and Rank Badges Credits to:</b> Yuginworks</p>
+      <p><b>Illustrations in Most Views/Pages Credits to: </b><a target="_blank" href="https://undraw.co/">https://undraw.co/</a></p>
+      <p><b>Mobile App Background Image Credits to:</b> Zeafy</p>
+      <p><b>Source (paiza.io Logo):</b></p><a target="_blank" href="http://pronama.jp/2015/03/09/paiza-io/">http://pronama.jp/2015/03/09/paiza-io/</a><br><br>
+      <p>Team TechnoRock especially its Full Stack Developer would like to thank the following for their participation and support in this Web and mobile application:</p>
+      <ul>
+        <li style="list-style-type: disc;">Almighty God, his family and friends & Gordon College especially its College of Computer Studies (CCS) department</li>
+        <li style="list-style-type: disc;">Google LLC</li>
+        <li style="list-style-type: disc;">Hostinger International, Ltd.</li>
+        <li style="list-style-type: disc;">Social Media Platforms (Facebook and Instagram (owned by Facebook, Inc.) & Twitter) and the supporters of PythoMy in these social media platforms</li>
+        <li style="list-style-type: disc;">Dr. Erlinda C. Abarintos, DIT, FRIIT</li>
+        <li style="list-style-type: disc;">Oscar M. Abrajano, Jr.</li>
+        <li style="list-style-type: disc;">Christian V. Alip</li>
+        <li style="list-style-type: disc;">Aenon John P. Alcorcon</li>
+        <li style="list-style-type: disc;">Dr. Roel P. Anicas, DA, EdD, DRDev, FRIEDr, FRIRes</li>
+        <li style="list-style-type: disc;">Shirley T. Anciro</li>
+        <li style="list-style-type: disc;">Austin Ray Aranda</li>
+        <li style="list-style-type: disc;">Jan Aldrin Arciga</li>
+        <li style="list-style-type: disc;">Arnie Armada</li>
+        <li style="list-style-type: disc;">Jeremy Arrabe</li>
+        <li style="list-style-type: disc;">Jerald "Jao" Austero</li>
+        <li style="list-style-type: disc;">Gerald Michael Austria</li>
+        <li style="list-style-type: disc;">Jenalyn T. Bajado</li>
+        <li style="list-style-type: disc;">Melner Balce</li>
+        <li style="list-style-type: disc;">Jayson Balicat</li>
+        <li style="list-style-type: disc;">Bryan R. Balolong</li>
+        <li style="list-style-type: disc;">Mark Ian A. Bernardo</li>
+        <li style="list-style-type: disc;">Neil Marc Biron</li>
+        <li style="list-style-type: disc;">Lawrence Borbe</li>
+        <li style="list-style-type: disc;">Billy Joe Cabanglan</li>
+        <li style="list-style-type: disc;">Justin H. Cabrera</li>
+        <li style="list-style-type: disc;">Denize Yan Caliston</li>
+        <li style="list-style-type: disc;">Wesley B. Corpuz</li>
+        <li style="list-style-type: disc;">Vincent Andrew R. Cuenza</li>
+        <li style="list-style-type: disc;">Gabriel Angelo S. De Asis</li>
+        <li style="list-style-type: disc;">Josh Raynard de Vera</li>
+        <li style="list-style-type: disc;">Arlene Eroy Dela Rea</li>
+        <li style="list-style-type: disc;">Albert Joshua M. Diaz</li>
+        <li style="list-style-type: disc;">Lawrenz Sese Diestro</li>
+        <li style="list-style-type: disc;">Arnold Elacion, Jr.</li>
+        <li style="list-style-type: disc;">Francis Lucky Joy Esmero</li>
+        <li style="list-style-type: disc;">Phillip Espina</li>
+        <li style="list-style-type: disc;">Ej Darrell T. Faraon</li>
+        <li style="list-style-type: disc;">Margarette B. Fajardo</li>
+        <li style="list-style-type: disc;">Jet Renz Ferrer</li>
+        <li style="list-style-type: disc;">Mykel Andrew P. Flores</li>
+        <li style="list-style-type: disc;">Jaykim B. Fontila</li>
+        <li style="list-style-type: disc;">Lovely Rose Ann "Lyra" Gapoy</li>
+        <li style="list-style-type: disc;">Tricia Gayatin</li>
+        <li style="list-style-type: disc;">Rex Victor G. Gocela</li>
+        <li style="list-style-type: disc;">Ralf Emerson Guzman</li>
+        <li style="list-style-type: disc;">Hart</li>
+        <li style="list-style-type: disc;">Christian Daniel Henry</li>
+        <li style="list-style-type: disc;">Hanna B. Hilario</li>
+        <li style="list-style-type: disc;">Robby Andrew M. Julio</li>
+        <li style="list-style-type: disc;">Cedric D. Labrador</li>
+        <li style="list-style-type: disc;">Yrrej B. Laguatan</li>
+        <li style="list-style-type: disc;">Raniel R. Lambaco</li>
+        <li style="list-style-type: disc;">Mart Rudolph S. Macion</li>
+        <li style="list-style-type: disc;">John Matthew Magno</li>
+        <li style="list-style-type: disc;">Ma. Theresa H. Magkalas</li>
+        <li style="list-style-type: disc;">Juan Paolo Magtaas</li>
+        <li style="list-style-type: disc;">Jim Andre Mallari</li>
+        <li style="list-style-type: disc;">Ponciano Malit III</li>
+        <li style="list-style-type: disc;">Loudel M. Manaloto</li>
+        <li style="list-style-type: disc;">Xavier Joseph P. Manaloto</li>
+        <li style="list-style-type: disc;">Donna R. Mancao</li>
+        <li style="list-style-type: disc;">Michelle R. Mancao</li>
+        <li style="list-style-type: disc;">Gabriel Ian D. Mariano</li>
+        <li style="list-style-type: disc;">Neris Milanio</li>
+        <li style="list-style-type: disc;">Paolo Antonio C. Miranda</li>
+        <li style="list-style-type: disc;">Lanie P. Mirano</li>
+        <li style="list-style-type: disc;">Stephanie C. Molon</li>
+        <li style="list-style-type: disc;">Leonard S. Moralizon</li>
+        <li style="list-style-type: disc;">Michael Jan M. Muyano</li>
+        <li style="list-style-type: disc;">Mary Joy L. Nacor</li>
+        <li style="list-style-type: disc;">Joshua Ran Padua</li>
+        <li style="list-style-type: disc;">John Dominic Pagot</li>
+        <li style="list-style-type: disc;">John Alexis P. Pineda</li>
+        <li style="list-style-type: disc;">Abigail E. Ponce</li>
+        <li style="list-style-type: disc;">Arturo A. Ramos, Jr.</li>
+        <li style="list-style-type: disc;">Catherine M. Ramos</li>
+        <li style="list-style-type: disc;">Eric Ramos</li>
+        <li style="list-style-type: disc;">Sean Alfred R. Salvador</li>
+        <li style="list-style-type: disc;">Paulo A. Sampang</li>
+        <li style="list-style-type: disc;">John Raymond E. Samonte</li>
+        <li style="list-style-type: disc;">Angel Carlo N. Sangalang</li>
+        <li style="list-style-type: disc;">Carlito Enrico D. Santos</li>
+        <li style="list-style-type: disc;">Vincent Santos</li>
+        <li style="list-style-type: disc;">Raven Jethro Saludo</li>
+        <li style="list-style-type: disc;">Eugene Seguiban</li>
+        <li style="list-style-type: disc;">John Mervin V. Sibal</li>
+        <li style="list-style-type: disc;">Jagjit E. Singh</li>
+        <li style="list-style-type: disc;">Ian E. Sison</li>
+        <li style="list-style-type: disc;">Sonny Boy M. Sison, Jr.</li>
+        <li style="list-style-type: disc;">Jann Melvin R. Tabucao</li>
+        <li style="list-style-type: disc;">Adrienne Braganza Tacke</li>
+        <li style="list-style-type: disc;">LeBron James R. Teppang</li>
+        <li style="list-style-type: disc;">Via Grazielle Torres</li>
+        <li style="list-style-type: disc;">Daniel Joshua M. Umandap</li>
+        <li style="list-style-type: disc;">Eliazar John Ursula</li>
+        <li style="list-style-type: disc;">Owen Jasper Vargas</li>
+        <li style="list-style-type: disc;">Jossa Lee Velado</li>
+        <li style="list-style-type: disc;">Jovan M. Villaflores</li>
+      </ul>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+    </div>
+  </div>
+  <div id="forgotpassmodal" class="modal">
+    <div class="modal-content">
+      <h6 style="color:#666666;">Please enter the required (*) details to retrieve your forgotten password.</h6>
+      <div class='input-field col s10 offset-s1'>
+        <i class="material-icons prefix">account_box</i>
+        <input class='validate' type='text' name='username' required id='fgpUsername' />
+        <label for='fgpUsername'>Enter your username or e-mail address<sup>*</sup></label>
+      </div>
+      <div class='row col s6 offset-s3'>
+        <center>
+          <button  id="btn-login" name='btn-login' class='col s12 btn btn-large waves-effect darken-3' style="background-color: #0fbcf9!important;" onclick="changePass()">Send E-mail</button>
+        </center>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+    </div>
+  </div>
+  <div id="lesson" class="modal">
+    <div class="modal-content">
+      <h3>Python Syntax</h3>
+      <div class="divider"></div>
+      <p>Unlike other object-oriented programming languages, Python <b>does not use semi-colon (;)</b> to separate two lines of code.<p>
+      <p>As you see in the example, we have written 2 different lines of code without using semi-colon for ending the statement of each.</p>
+      <p>The <b>print()</b> method displays in the console (the software with only the black background and white text) inside your monitor screen the content inside its parentheses.</p>
+      <div class="card" style="background-color:black; font-family:'Courier';">
+        <p class="code_or_output">print("I love chocolates!")</p>
+        <p class="code_or_output">print("Python is the best.")</p>
+      </div>
+      <p>Here are the <b>results</b> when you <b>run</b> the code.</p>
+      <div class="card" style="background-color:black; font-family:'Courier';">
+        <p class="code_or_output">I love chocolates!</p>
+        <p class="code_or_output">Python is the best.</p>
+      </div>
+      <h4>Displaying multiple values in one line</h4>
+      <div class="divider"></div>
+      <p>You can print 2 values in the <b>same output line</b> by simply putting <b>,</b> after the <b>first variable</b> or <b>value</b> inside <b>print()</b> then typing in the <b>second variable</b> or <b>value</b>, displaying them in one line separated by a <b>space (" ")</b></p>
+      <div class="card" style="background-color:black; font-family:'Courier';"> 
+        <p class="code_or_output">a = "Hello"</p>
+        <p class="code_or_output">b = "Earth"</p>
+        <p class="code_or_output">print(a, b)</p>
+      </div>
+      <div class="card" style="background-color:black; font-family:'Courier';"> 
+        <p class="code_or_output">Hello Earth</p>
+      </div>
+      <p>Now display on your screen, "<b>Hello World!</b>"</p>
+      <h5>QUIZ</h5>
+      <div class="divider"></div>
+      <ol type="1">
+        <li>Type the word "<b>print</b>".</li>
+        <li>Type <b>()</b> after the word <b>print</b>.</li>
+        <li>Inside the <b>()</b>, type <b>""</b>.</li>
+        <li>Inside the <b>""</b>, type <b>Hello World!</b></li>
+      </ol>
+      <h5>YOUR CODE</h5>
+      <div class="divider"></div><br>
+      <textarea wrap="hard" id="helloWorldAns" class="code" onchange="checkIfBlank()" oninput="checkIfBlank()" onfocus="checkIfBlank()"></textarea>
+      <div class="row">
+        <div class="col s6">
+          <a class="btn waves-effect waves-light btn-large disabled" id="btnRun" onclick="run()">Run</a>
+        </div>
+        <div class="col s6">
+          <a class="btn waves-effect waves-light btn-large disabled" id="btnSubmit" onclick="submit()">Submit</a>
+        </div>
+      </div>
+      <h5>OUTPUT</h5>
+      <div class="divider"></div><br>
+      <textarea wrap="hard" id="helloWorldRun" class="code" readonly></textarea>
+    </div>
+    <div class="modal-footer">
+          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+    </div>
+  </div>
+  <div class="modal" id="ifRegister">
+    <div class="modal-content">
+      <center><i class="material-icons" id="resIcon" style="font-size: 70px;"></i></center><br>
+      <p id="outcome"></p>
+      <div class="row">
+        <div class="col s6">
+          <button class="btn waves-effect waves-light btn-large green" onclick="yes()">Yes</button>
+        </div>
+        <div class="col s6">
+          <button class="btn waves-effect waves-light btn-large red" onclick="no()">No</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="declinedExpert">
+    <div class="modal-content">
+      <center><i class="material-icons" style="font-size: 70px; color:red;">error</i></center><br>
+      <p>Unfortunately, we are here to inform you that based on our very critical analysis of your credentials, they are not yet enough to register you as a Python expert for this application.</p>
+      <h3 style="text-align:center;">Are you rather okay to be a <b>novice</b> of this application?</h3>
+      <div class="row">
+        <div class="col s12">
+          <button class="btn waves-effect waves-light btn-large green" onclick="yesUser()">Yes, I do.</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12">
+          <button class="btn waves-effect waves-light btn-large red" onclick="noImg()">No, I still want to prove myself.</button>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+    </div>
+  </div>
+  <div class="modal" id="terms">
+    <div class="modal-content">
+      <h3>Terms and Conditions</h3>
+      <div class="divider"></div>
+      <p>Please read these terms and conditions carefully before using PythoMy operated by TechnoRock.</p>
+        <h5>Conditions of Use</h5>
+        <p>We will provide their services to you, which are subject to the conditions stated below in this document. Every time you use this mobile app, use its services or make a purchase, you accept the following conditions. This is why we urge you to read them carefully.</p>
+        <h5>Privacy Policy</h5>
+        <p>Before you continue using our Website, we advise you to read our <a class="modal-trigger" data-target="privacypolicy" style="cursor:pointer;">privacy policy</a> regarding our user data collection. It will help you better understand our practices.</p>
+        <h5>Copyright</h5>
+        <p>Content published on this Website (digital downloads, images, texts, graphics, logos) is the property of TechnoRock and/or its content creators and protected by international copyright laws. The entire compilation of the content found on this website is the exclusive property of TechnoRock, with copyright authorship for this compilation by TechnoRock.</p>
+        <h5>Communications</h5>
+        <p>The entire communication with us is electronic. Every time you send us an email or use our mobile app, you are going to be communicating with us. You hereby consent to receive communications from us. If you subscribe to the news on our mobile app, you are going to receive regular emails from us. We will continue to communicate with you by posting news and notices on our mobile app and by sending you emails. You also agree that all notices, disclosures, agreements and other communications we provide to you electronically meet the legal requirements that such communications be in writing.</p>
+        <h5>Applicable Law</h5>
+        <p>By using this Website, you agree that the laws of the Philippines, without regard to principles of conflict laws, will govern these terms and conditions, or any dispute of any sort that might come between TechnoRock and you, or its business partners and associates.</p>
+        <h5>Disputes</h5>
+        <p>Any dispute related in any way to your use of this Website or to products you purchase from us shall be arbitrated by state and you consent to exclusive jurisdiction and venue of such courts.</p>
+        <h5>Comments, Reviews and Emails</h5>
+        <p>Users may post content as long as it is not obscene, illegal, defamatory, threatening, infringing of intellectual property rights, invasive of privacy or injurious in any other way to third parties. Content has to be free of software viruses, political campaign, and commercial solicitation.</p>
+        <p>We reserve all rights (but not the obligation) to remove and/or edit such content. When you post your content, you grant TechnoRock non-exclusive, royalty-free and irrevocable right to use, reproduce, publish, modify such content throughout the world in any media.</p>
+        <h5>License and Site Access</h5>
+        <p>We grant you a limited license to access and make personal use of this Website. You are never allowed to download and modify it. If you want any certain changes in this Website, you are free to express it by direct communication to us using <b>Feedbacks and Concerns</b> or <b>e-mail</b> but it may be done only based on the decisions of TechnoRock especially the developer of PythoMy.</p>
+        <h5>User Account</h5>
+        <p>If you are an owner of an account on this mobile app, you are solely responsible for maintaining the confidentiality of your private user details (username and password). You are responsible for all activities that occur under your account or password.</p>
+        <p>We reserve all rights to terminate accounts and edit or remove content in their sole discretion.</p>
+    </div>
+    <div class="modal-footer">
+          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+    </div>
+  </div>
+  <div class="modal" id="fvmodal">
+    <div class="modal-content">
+      <h3>Expert Validation Quiz</h3>
+      <div class="divider"></div>
+      <p>Create a <b>calculator</b> that have <b>2 arguments (1000 and 500)</b> then allowed operators are <b>+ - * /</b>. Display the <b>sum, difference, product </b> or <b>quotient (Result should be an int.)</b> depending on chosen operator. If operator is not from the allowed operators, display <b>"Invalid".</b></p>
+      <h5>YOUR CODE</h5>
+      <div class="divider"></div>
+      <textarea wrap="hard" id="fvAns" class="code"></textarea>
+      <div class="row">
+        <div class="col s6">
+          <a class="btn waves-effect waves-light btn-large" onclick="fvRun()">Run</a>
+        </div>
+        <div class="col s6">
+          <a class="btn waves-effect waves-light btn-large" onclick="fvSubmit()">Submit</a>
+        </div>
+      </div>
+      <h5>OUTPUT</h5>
+      <div class="divider"></div>
+      <textarea wrap="hard" id="fvRun" class="code" readonly></textarea>
+    </div>
+    <div class="modal-footer">
+          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+    </div>
+  </div>
+  <div class="modal" id="loginmodal">
+    <div class="modal-content">
+      <center><img loading="lazy" class="responsive-img" style="width: 100px;" src="images/landing_images/PythoMy Logo.png" /></center>
+      <h6 style="color:#666666;">Please login into your novice/expert site.</h6>
+      <div class='input-field col s10 offset-s1'>
+        <i class="material-icons prefix">account_box</i>
+        <input class='validate' type='text' name='username' required id='username' />
+        <label for='username'>Enter your username</label>
+      </div>
+      <div class='input-field col s10 offset-s1'>
+        <i class="material-icons prefix">lock</i>
+        <input class='validate' type='password' name='password' required id='password' />
+        <label for='password'>Enter your password</label>
+      </div>
+      <div class='row col s6 offset-s3'>
+        <center>
+          <button  id="btn-login" name='btn-login' class='col s12 btn btn-large waves-effect darken-3' style="background-color: #0fbcf9!important;" onclick="logIn()">Log In</button>
+        </center><br>
+      </div>
+      <div class='row col s6 offset s3'>
+        <a class="modal-trigger" style="cursor: pointer;" data-target="forgotpassmodal">I forgot my password.</a>
+      </div>
+    </div>
+    <div class="modal-footer">
+          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+    </div>
+  </div>
+  <div class="modal" id="verifymodal">
+    <div class="modal-content">
+      <center><img loading="lazy" class="responsive-img" style="width: 100px;" src="images/landing_images/PythoMy Logo.png" /></center>
+      <div class='input-field col s10 offset-s1'>
+        <i class="material-icons prefix">lock</i>
+        <input class='validate' type='text' name='username' required id='fld_verifcode' />
+        <label for='fld_verifcode'>Please enter your verification number from your e-mail or text in your mobile phone number.<sup>*</sup></label>
+      </div>
+      <div class='row col s6 offset-s3'>
+        <center>
+          <button  id="btn-verify" name='btn-login' class='col s12 btn btn-large waves-effect darken-3' style="background-color: #0fbcf9!important;" onclick="verify()">Verify</button>
+        </center>
+      </div>
+    </div>
+    <div class="modal-footer">
+          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+    </div>
+  </div>
+  <div class="modal" id="registrationForm">
+    <div class="modal-content">
+      <center><img loading="lazy" class="responsive-img" style="width: 100px;" src="images/landing_images/PythoMy Logo.png" /></center>
+      <div class="row">
+        <div class="col s12">
+          <h6 style="color:#666666;">Please type in your registration details.</h6>
+            <div class='input-field col s12'>
+              <i class="material-icons prefix">person</i>
+              <input class='validate' type='text' name='username' required id='firstname' />
+              <label for='firstname'>First Name<sup>*</sup></label>
+            </div>
+            <div class='input-field col s12'>
+              <i class="material-icons prefix">person</i>
+              <input class='validate' type='text' name='password' required id="lastname" />
+              <label for='lastname'>Last Name<sup>*</sup></label>
+            </div>
+            <div class='input-field col s12'>
+              <i class="material-icons prefix">mail</i>
+              <input class='validate' type='email' name='password' required id="email" />
+              <label for='email'>E-mail Address<sup>*</sup></label>
+            </div>
+            <div class='input-field col s12'>
+              <i class="material-icons prefix">smartphone</i>
+              <input class='validate' type='text' name='password' id="phone" />
+              <label for='phone'>Mobile Phone Number (starting with 09)</label>
+            </div>
+            <div class='input-field col s12'>
+              <i class="material-icons prefix">account_box</i>
+              <input class='validate' type='text' name='username' required id='username_reg' />
+              <label for='username_reg'>Username<sup>*</sup></label>
+            </div>
+            <div class='input-field col s12'>
+              <i class="material-icons prefix">lock</i>
+              <input class='validate' type='password' name='password' required id="password_reg" />
+              <label for='password_reg'>Password<sup>*</sup></label>
+            </div>
+            <div class='input-field col s12'>
+              <i class="material-icons prefix">lock</i>
+              <input class='validate' type='password' name='password' required id="confirm_pass" />
+              <label for='confirm_pass'>Confirm Password<sup>*</sup></label>
+            </div>
+            <!--
+            <div class='input-field col s12'>
+              <select id="role">
+                <option value="" disabled selected>What's your role in the application?<sup>*</sup></option>
+                <option value="Novice">Novice</option>
+                <option value="Expert (Pending)">Expert</option>
+              </select>
+            </div>
+            -->
+            <div class="input-field col s12">
+              <label> <a class="modal-trigger" data-target="usersandexpertsmodal" style="cursor:pointer;">Learn more about Novices and Experts</a></label><br> 
+            </div>
+            <div class='input-field col s12'>
+              <label>
+                <input type="checkbox" value="1" id="agree"/>
+                <span>I agree to the <a class="modal-trigger" data-target="terms" style="cursor:pointer;">Terms and Conditions</a> and <a class="modal-trigger" data-target="privacypolicy" style="cursor:pointer;">Privacy Policy</a>.<sup>*</sup></span>
+              </label><br>
+            </div>
+          </div>
+        </div>
+        <div class='row col s10 offset-s1'>
+          <center>
+            <button  id="btn-login" name='btn-login' class='col s12 btn btn-large waves-effect darken-3' style="background-color: #0fbcf9!important;" onclick="register()">Register</button>
+          </center>
+        </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+    </div>
+  </div>
+  <div id="pictureModal" class="modal">
+        <div class="modal-content">
+          <h4>Upload Credentials</h4>
+          <center>
+            <img width="500px" height="200px" id="image">
+          </center>
+          <input type="file" id="credentialImg">
+          <center>
+            <button  id="btn-login" name='btn-login' class='col s12 btn btn-large waves-effect darken-3' style="background-color: #0fbcf9!important;" onclick="uploadImg()">Upload</button>
+            <button  id="btn-login" name='btn-login' class='col s12 btn btn-large waves-effect darken-3' style="background-color: red!important;" onclick="fvQuiz()">Go Directly to Quiz</button>
+          </center>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+      </div>
+  <!--  Scripts-->
+  <script type="text/javascript" src="js/redirect.js"></script>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/sweetalert.min.js"></script>
+  <script src="js/main/landingpage.js"></script>
+  <script type="text/javascript">
+    function autoplay() {
+      $('.carousel.carousel-slider').carousel('next');
+      $('.carousel.carousel-slider.review-carousel').carousel('next');
+      setTimeout(autoplay, 5000);
+    }
+    $(document).ready(function(){
+      let currentDateObj = new Date();
+      $("#currentYear").html(currentDateObj.getFullYear());
+      let landingImages = ["tep.jpg", "james.jpg", "mark_ian.jpg", "aenon.jpg", "padua.jpg", "owen.jpg", "lex.jpg", "lyra.jpg", "maam_lanie.jpg", "ralf.jpg", "sean.jpg", "sir_neil.jpg"];
+      let randomIndex = Math.floor(Math.random() * landingImages.length);
+      $("#hero_img").attr("src","images/landing_images/" + landingImages[randomIndex]);
+      $('.carousel').carousel();
+      $('.slider').slider();
+      $('.carousel.carousel-slider').carousel({
+        indicators: true
+      });
+      let carouselHeight = document.getElementById("carousel-container").clientHeight;
+      $('.carousel.carousel-slider.review-carousel').carousel({
+        indicators:true,
+        fullWidth:true
+      }).height(carouselHeight / 2);
+      setTimeout(()=>{
+        autoplay();
+      }, 4500);
+      
+      $(".modal").modal();
+      $(".sidenav").sidenav();
+      $('select').formSelect();
+      $(document).keyup(function(e){
+        if(e.keyCode == 44) return false;
+      });
+      const images = document.querySelectorAll("img");
+
+      const imgOptions = {};
+      const imgObserver = new IntersectionObserver((entries, imgObserver) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+
+          const img = entry.target;
+          //img.src = img.src.replace("w=10&", "w=800&");
+          imgObserver.unobserve(entry.target);
+        });
+      }, imgOptions);
+
+      images.forEach((img) => {
+        imgObserver.observe(img);
+      });
+
+      var rememberedUsername = localStorage.getItem("username");
+      var rememberedPassword = localStorage.getItem("secret_key");
+      var isUsernameRemembered = rememberedUsername != null;
+      var isPasswordRemembered = rememberedPassword != null;
+      var shouldAutoLogin = isUsernameRemembered && isPasswordRemembered;
+      if (shouldAutoLogin) {
+        swal({
+          text: "Logging you in for at least 5 seconds...",
+          icon: "info"
+        }).then(function(){
+          setTimeout(function(){
+            window.location.href = "python.html";
+          }, 5000);
+        });
+      }
+    });
+    document.addEventListener("keyup", function (e) {
+    var keyCode = e.keyCode ? e.keyCode : e.which;
+            if (keyCode == 44) {
+                stopPrntScr();
+            }
+        });
+function stopPrntScr() {
+
+            var inpFld = document.createElement("input");
+            inpFld.setAttribute("value", ".");
+            inpFld.setAttribute("width", "0");
+            inpFld.style.height = "0px";
+            inpFld.style.width = "0px";
+            inpFld.style.border = "0px";
+            document.body.appendChild(inpFld);
+            inpFld.select();
+            document.execCommand("copy");
+            inpFld.remove(inpFld);
+        }
+       function AccessClipboardData() {
+            try {
+                window.clipboardData.setData('text', "Access   Restricted");
+            } catch (err) {
+            }
+        }
+        setInterval("AccessClipboardData()", 300);
+  </script>
+  <script type="text/javascript">
+    $('#fvmodal').bind('cut copy paste', function (e) {
+        e.preventDefault();
+    });
+    $("#fld_verifcode").val("");
+    function fvQuiz() {
+      localStorage.setItem("imgid",localStorage.getItem("imageid"));
+      localStorage.removeItem("imageid");
+      $("#fvmodal").modal("open");
+    }
+    function yesUser() {
+      $.getJSON("https://pythomy-staging.000webhostapp.com/_pythomy/asuser.php?id=" + localStorage.getItem("imageid"),function(data){
+        if (data.status == "Created") {
+          localStorage.setItem("id",localStorage.getItem("imageid"));
+          localStorage.removeItem("imageid");
+          window.location.href = 'simplestatements.html';
+        }
+      });
+    }
+    function noImg() {
+      $("#pictureModal").modal("open");
+    }
+    function verify() {
+      if ($("#fld_verifcode").val() != "") {
+        $.getJSON("https://pythomy-staging.000webhostapp.com/_pythomy/verifcode.php?id=" + parseInt(localStorage.getItem("id")),function(data){
+          fld_verifcode = parseInt($("#fld_verifcode").val());
+          if (fld_verifcode == parseInt(data[0].fld_verifcode)) {
+            $.getJSON("https://pythomy-staging.000webhostapp.com/_pythomy/verify.php?id=" + parseInt(localStorage.getItem("id")),function(data){
+              if (data.status == "Created") {
+                window.location.href = "python.html";
+              }
+            });
+          } else {
+            swal({
+              text: "Incorrect verification code. Please enter the correct one. Thank you.",
+              icon: "error"
+            });
+            //window.alert("Incorrect verification code. Please enter the correct one. Thank you.");
+          }
+        });
+      } else {
+        swal({
+          text: "Please enter the REQUIRED (*) verification code. Thank you.",
+          icon: "error"
+        });
+        //window.alert("Please enter the REQUIRED (*) verification code. Thank you.");
+      }
+    }
+    function changePass() {
+      fgpUsername = $("#fgpUsername").val();
+      if (fgpUsername != "") {
+        $.post("https://pythomy-staging.000webhostapp.com/_pythomy/fgp.php",JSON.stringify({fld_username:fgpUsername,fld_verifcode:Math.floor(Math.random() * 999999)}),function(data){
+          if (data.status == "Accepted") {
+            swal({
+              text: 'E-mail sent. Please check your e-mail (' + data.fld_email + ') before logging in. Thank you.',
+              icon: "success"
+            });
+            //window.alert('E-mail sent. Please check your e-mail (' + data.fld_email + ') before logging in. Thank you.');
+          } else {
+            swal({
+              text: fgpUsername + ' does not exist. Sorry.',
+              icon: "error"
+            });
+            //window.alert(fgpUsername + ' does not exist. Sorry.');
+          }
+        });        
+      } else {
+        swal({
+          text: 'Please enter the REQUIRED (*) fields. Thank you.',
+          icon: "error"
+        });
+        //window.alert('Please enter the REQUIRED (*) fields. Thank you.');
+      }
+    } 
+    function logIn(){
+      $(function(){
+        var username = $('#username').val();
+        var password = $('#password').val();
+        if (username != "" || password != "") {
+          vUrl = "https://pythomy-staging.000webhostapp.com/_pythomy/login.php";
+          $.post(vUrl,JSON.stringify({username:username,password:password}),function(data){
+            if (Array.isArray(data)) {
+              if (data[0]["fld_username"].toLowerCase() == username.toLowerCase() && data[0]["fld_password"] == password){
+                if (data[0]["fld_role"] == "Novice" || data[0]["fld_role"] == "Expert") {
+                  localStorage.setItem("username",data[0]["fld_username"]);
+                  localStorage.setItem("firstname", data[0]["fld_firstname"]);
+                  localStorage.setItem("lastname", data[0]["fld_lastname"]);
+                  localStorage.setItem("email", data[0]["fld_email"]);
+                  localStorage.setItem("id",data[0]["fld_id"]);
+                  localStorage.setItem("name",data[0]["fld_firstname"] + " " + data[0]["fld_lastname"]);
+                  localStorage.setItem("role",data[0]["fld_role"]);
+                  localStorage.setItem("secret_key", data[0]["fld_password"]);
+                  if (parseInt(data[0].fld_verified) == 0) {
+                    $("#verifymodal").modal("open");
+                  } else {
+                    window.location.href = 'python.html';
+                  }
+                } else if (data[0]["fld_role"] == "Expert (Declined)") {
+                  $("#declinedExpert").modal("open");
+                  localStorage.setItem("imageid",data[0]["fld_id"]);
+                  localStorage.setItem("username",data[0]["fld_username"]);
+                  localStorage.setItem("name",data[0]["fld_firstname"] + " " + data[0]["fld_lastname"]);
+                } else if (data[0]["fld_role"] == "Expert (Pending)") {
+                  swal({
+                    text: "We are still checking if you are a qualified expert here. Please wait for a while. Thank you.",
+                    icon: "info"
+                  });
+                  //window.alert("We are still checking if you are a qualified expert here. Please wait for a while. Thank you.");
+                }
+              }  
+            } else {
+              if (data.status == "OK") {
+                swal({
+                  text: "Invalid username or password. Please try again.",
+                  icon: "error"
+                });
+                //window.alert("Invalid username or password. Please try again.")
+              }
+            }
+          });  
+        } else {
+          swal({
+            text: "Please fill out all fields. Thank you.",
+            icon: "error"
+          });
+          // window.alert("Please fill out all fields. Thank you.");
+        }
+        
+      });
+    }
+    function fvRun() {
+      fvAns = $("#fvAns").val();
+      codes = JSON.stringify({
+        source:fvAns,
+        lang:"python3"
+      });
+      swal({
+        text: "Running for at least 5 seconds...",
+        icon: "info"
+      });
+      //window.alert('Running for at least 5 seconds...');
+      $.post("https://pythomy-staging.000webhostapp.com/_pythonapi/curl.php",codes,function(data){
+        setTimeout(function(){
+          $.getJSON("https://pythomy-staging.000webhostapp.com/_pythonapi/curl2.php?id=" + data.id,function(data){
+            if (data.stdout){
+              $("#fvRun").html(data.stdout);
+              yourAns = data.stdout;
+            } else if (data.stderr) {
+              yourAns = "";
+              $("#fvRun").html(data.stderr);
+            }
+            
+          });
+        },5000);
+      });
+    }
+    function fvRunSub(ans) {
+      codes = JSON.stringify({
+        source:ans,
+        lang:"python3"
+      });
+      swal({
+        text: "Running and checking for at least 5 seconds...",
+        icon: "info"
+      });
+      //window.alert('Running and checking for at least 5 seconds...');
+      $.post("https://pythomy-staging.000webhostapp.com/_pythonapi/curl.php",codes,function(data){
+        setTimeout(function(){
+          $.getJSON("https://pythomy-staging.000webhostapp.com/_pythonapi/curl2.php?id=" + data.id,function(data){
+            if (data.stdout)
+              yourAns = data.stdout;
+            else
+              yourAns = "";
+            if (yourAns == "1500\n" || this.yourAns == "500\n" || this.yourAns == "500000\n" || this.yourAns == "2\n" || this.yourAns == "Invalid") {
+                
+                idData = JSON.stringify({id:parseInt(localStorage.getItem("imgid"))});
+                ansData = JSON.stringify({
+                  fld_expertid:parseInt(localStorage.getItem("imgid")),
+                  fld_answer:ans
+                });
+                $.post("https://pythomy-staging.000webhostapp.com/_pythomy/pend.php",idData,function(data){
+                  if(data.status == "Created") {
+                    $.post("https://pythomy-staging.000webhostapp.com/_pythomy/insertexpertsanswer.php",ansData,function(data){
+                      if (data.status == "Created") {
+                        swal({
+                          text: "Registered and credential(s) successfully uploaded. You have now passed Python Syntax (Simple Statements). You can now proceed to Indentations (Simple Statements). Kindly log in your account to proceed. You need to please check your e-mail in the e-mail address or mobile phone number you registered. Thank you.",
+                          icon: "success"
+                        });
+                        //window.alert("Registered and credential(s) successfully uploaded. You have now passed Python Syntax (Simple Statements). You can now proceed to Indentations (Simple Statements). Kindly log in your account to proceed. You need to please check your e-mail in the e-mail address or mobile phone number you registered. Thank you.");
+                        $("#firstname").val("");
+                        $("#lastname").val("");
+                        $("#email").val("");
+                        $("#phone").val("");
+                        $("#username_reg").val("");
+                        $("#password_reg").val("");
+                        //$("#role").val("");
+                        $("#confirm_pass").val("");
+                        $('#agree').prop('checked', false);
+                        $("#agree:checked").val("1");
+                        $("#fvAns").val("");
+                        document.getElementById("image").src = "";
+                      }
+                    });
+                  }
+                });
+            } else {
+                console.log("Incorrect!");
+                idData = JSON.stringify({id:parseInt(localStorage.getItem("imgid"))});
+                $.post("https://pythomy-staging.000webhostapp.com/_pythomy/decline.php",idData,function(data){
+                  if(data.status == "Created") {
+                    swal({
+                      text: "Registered but we need something to talk about. You have now passed Python Syntax (Simple Statements). You can now proceed to Indentations (Simple Statements). Kindly log in your account to proceed.",
+                      icon: "success"
+                    });
+                    //window.alert("Registered but we need something to talk about. You have now passed Python Syntax (Simple Statements). You can now proceed to Indentations (Simple Statements). Kindly log in your account to proceed.");
+                    $("#firstname").val("");
+                    $("#lastname").val("");
+                    $("#email").val("");
+                    $("#phone").val("");
+                    $("#username_reg").val("");
+                    $("#password_reg").val("");
+                    //$("#role").val("");
+                    $("#confirm_pass").val("");
+                    $('#agree').prop('checked', false);
+                    $("#agree:checked").val("1");
+                    $("#fvAns").val("");
+                    document.getElementById("image").src = "";
+                  }
+                });
+            }
+          });
+        },5000);
+      });
+    }
+    function fvSubmit() {
+      fvAns = $("#fvAns").val();
+      codes = JSON.stringify({
+        source:fvAns,
+        lang:"python3"
+      });
+      $.post("https://pythomy-staging.000webhostapp.com/_pythonapi/curl.php",codes,function(data){
+        setTimeout(function(){
+          $.getJSON("https://pythomy-staging.000webhostapp.com/_pythonapi/curl2.php?id=" + data.id,function(data){
+            if (data.stdout)
+              yourAns = data.stdout;
+            else
+              yourAns = "";
+            if (!yourAns || yourAns == "") {
+              fvRunSub(fvAns);
+            } else {
+              if (yourAns == "1500\n" || this.yourAns == "500\n" || this.yourAns == "500000\n" || this.yourAns == "2\n" || this.yourAns == "Invalid") {
+                console.log("Correct!");
+                idData = JSON.stringify({id:parseInt(localStorage.getItem("imgid"))});
+                ansData = JSON.stringify({
+                  fld_expertid:parseInt(localStorage.getItem("imgid")),
+                  fld_answer:fvAns
+                });
+                $.post("https://pythomy-staging.000webhostapp.com/_pythomy/pend.php",idData,function(data){
+                  if(data.status == "Created") {
+                    $.post("https://pythomy-staging.000webhostapp.com/_pythomy/insertexpertsanswer.php",ansData,function(data){
+                      if (data.status == "Created") {
+                        swal({
+                          text: "Registered and credential successfully uploaded. You have now passed Python Syntax (Simple Statements). You can now proceed to Indentations (Simple Statements). Kindly log in your account to proceed. You need to please check your e-mail in the e-mail address or text in the mobile phone number you registered. Thank you.",
+                          icon: "success"
+                        });
+                        //window.alert("Registered and credential successfully uploaded. You have now passed Python Syntax (Simple Statements). You can now proceed to Indentations (Simple Statements). Kindly log in your account to proceed. You need to please check your e-mail in the e-mail address or text in the mobile phone number you registered. Thank you.");
+                        $("#firstname").val("");
+                        $("#lastname").val("");
+                        $("#email").val("");
+                        $("#username_reg").val("");
+                        $("#password_reg").val("");
+                        //$("#role").val("");
+                        $("#confirm_pass").val("");
+                        $('#agree').prop('checked', false);
+                        $("#agree:checked").val("1");
+                        $("#fvAns").val("");
+                        document.getElementById("image").src = "";
+                      }
+                    });
+                  }
+                });
+              } else {
+                console.log("Incorrect!");
+                idData = JSON.stringify({id:parseInt(localStorage.getItem("imgid"))});
+                $.post("https://pythomy-staging.000webhostapp.com/_pythomy/decline.php",idData,function(data){
+                  if(data.status == "Created") {
+                    swal({
+                      text: "Registered but we need something to talk about. You have now passed Python Syntax (Simple Statements). You can now proceed to Indentations (Simple Statements). Kindly log in your account to proceed.",
+                      icon: "info"
+                    });
+                    //window.alert("Registered but we need something to talk about. You have now passed Python Syntax (Simple Statements). You can now proceed to Indentations (Simple Statements). Kindly log in your account to proceed.");
+                  }
+                });
+              }
+            }
+          });
+        },5000);
+      });
+    }
+    
+    base64img = "";
+    $("#firstname").val("");
+    $("#lastname").val("");
+    $("#email").val("");
+    $("#phone").val("");
+    $("#username_reg").val("");
+    $("#password_reg").val("");
+    //$("#role").val("");
+    $("#confirm_pass").val("");
+    $('#agree').prop('checked', false);
+    $("#agree:checked").val("1");
+    $("#fvAns").val("");
+    document.getElementById("image").src = "";
+    function readFile() {
+      if (this.files && this.files[0]) {
+        var FR = new FileReader();
+        FR.addEventListener("load", function (e) {
+          base64img = e.target.result;
+          document.getElementById("image").src = base64img;
+          localStorage.setItem("b64",base64img);
+        });
+        FR.readAsDataURL(this.files[0]);
+      } 
+    }
+    try {
+      document.getElementById("credentialImg").addEventListener("change", readFile);
+    } catch (err) {}
+    function uploadImg(){
+      data = JSON.stringify({
+        fld_userid:parseInt(localStorage.getItem("imageid")),
+        fld_image:localStorage.getItem("b64")
+      });
+      $.post("https://pythomy-staging.000webhostapp.com/_pythomy/insertimg.php",data,function(data){
+        if (data.status == "Created") {
+          if (localStorage.getItem("result")) {
+            if (localStorage.getItem("result") == "OK") {
+              correct = JSON.stringify({
+                cid:data.id,
+                lid:1
+              });
+              $.post("https://pythomy-staging.000webhostapp.com/_pythomy/check.php",correct,function(data){
+                if (data.status == "OK") {
+                  //window.alert("Registered and credential successfully uploaded. You have now passed Python Syntax (Simple Statements). You can now proceed to Indentations (Simple Statements). Kindly log in your account to proceed.");
+                  localStorage.removeItem("result");
+                  localStorage.setItem("imgid",localStorage.getItem("imageid"));
+                  localStorage.removeItem("imageid");
+                  $("#fvmodal").modal("open");
+                  $("#firstname").val("");
+                  $("#lastname").val("");
+                  $("#email").val("");
+                  $("#phone").val("");
+                  $("#username_reg").val("");
+                  $("#password_reg").val("");
+                  //$("#role").val("");
+                  $("#confirm_pass").val("");
+                  $('#agree').prop('checked', false);
+                  $("#agree:checked").val("1");
+                  $("#fvAns").val("");
+                  document.getElementById("image").src = "";
+                }
+              }); 
+              
+            }
+          } else {
+            localStorage.setItem("imgid",localStorage.getItem("imageid"));
+            localStorage.removeItem("imageid");
+            $("#fvmodal").modal("open");
+            //window.alert("Registered and credential successfully uploaded.");
+          }
+        }
+      });
+    }
+    // Contact Us
+    document.getElementById("btnContactUs").onclick = function() {
+      let contactData = JSON.stringify({
+        fld_firstname: $("#contact_first_name").val() ?? "",
+        fld_lastname: $("#contact_last_name").val() ?? "",
+        fld_email: $("#contact_email").val(),
+        fld_message: $("#contact_message").val()
+      });
+      if ($("#contact_email").val() != "" && $("#contact_message").val() != "") {
+        if (!validateEmail($("#contact_email").val())) {
+          swal({
+            text: "Please enter a valid e-mail address. Thank you.",
+            icon: "error"
+          });
+          //window.alert("Please enter a valid e-mail address. Thank you.");
+        } else {
+          $.post("https://pythomy-staging.000webhostapp.com/_pythomy/contactus.php",contactData,function(data){
+            if (data.status == "Created") {
+              $("#contact_first_name").val("");
+              $("#contact_last_name").val("");
+              $("#contact_email").val("");
+              $("#contact_message").val("");
+              swal({
+                text: "Message successfully sent!",
+                icon: "success"
+              });
+              //window.alert("Message successfully sent!");
+            } else {
+              swal({
+                text: "Failed to send! Please try again.",
+                icon: "error"
+              });
+              //window.alert("Failed to send! Please try again.");
+            }
+          });
+        }
+      } else {
+        swal({
+          text: "Kindly fill up your e-mail address and message. Thank you.",
+          icon: "error"
+        });
+        //window.alert("Kindly fill up your e-mail address and message. Thank you.")
+      }
+      
+    }
+    function titleCase(str){
+      str = str.toLowerCase().split(' ');
+      let final = [ ];
+      for(let word of str){
+        final.push(word.charAt(0).toUpperCase()+ word.slice(1));
+      }
+      return final.join(' ')
+    }
+    function validateEmail(email) {
+      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(String(email).toLowerCase());
+    }
+    function register() {
+      firstname = $("#firstname").val();
+      lastname = $("#lastname").val();
+      email = $("#email").val();
+      phone = $("#phone").val();
+      username = $("#username_reg").val();
+      password = $("#password_reg").val();
+      role = "Novice";
+      confirm_pass = $("#confirm_pass").val();
+      agree = $("#agree:checked").val();
+      if (firstname != "" && lastname != "" && email != "" && username != "" && password != "" && role && confirm_pass != "" && agree != "") {
+        $.getJSON("https://pythomy-staging.000webhostapp.com/_pythomy/ifexist.php?username=" + username + "&email=" + email,function(data){
+          if (data.status == "OK") {
+            if (agree == "1" && password == confirm_pass && (firstname.match(/[A-Z]/g) || firstname.match(/[a-z]/g)) && (lastname.match(/[A-Z]/g) || lastname.match(/[a-z]/g)) && firstname.match(/[^0-9]/g) && lastname.match(/[^0-9]/g) && !firstname.match(/[!$%^&*()_+|~=`{}\[\]:";<>?\/@]/g) && !lastname.match(/[!$%^&*()_+|~=`{}\[\]:";<>?\/@]/g) && validateEmail(email) || (phone.match(/[0-9]/g) && phone.length == 11 && phone.startsWith("09"))) {
+              if (phone != "") {
+                  if (phone.match(/[0-9]/g) && phone.length == 11 && phone.startsWith("09")) {
+                $.post("https://pythomy-staging.000webhostapp.com/_pythomy/insert.php",JSON.stringify({fld_lastname:titleCase(lastname),fld_firstname:titleCase(firstname),fld_email:email,fld_role:role,fld_phone:phone,fld_username:username,fld_password:password,fld_verifcode:Math.floor(Math.random() * 999999)}),function(data){
+                if (data.status == "Created") {
+                  if (role == "Novice") {
+                    if (localStorage.getItem("result")) {
+                      if (localStorage.getItem("result") == "OK") {
+                        correct = JSON.stringify({
+                          cid:data.id,
+                          lid:1
+                        });
+                        $.post("https://pythomy-staging.000webhostapp.com/_pythomy/check.php",correct,function(data){
+                          if (data.status == "OK") {
+                            swal({
+                              text: "Registered. You have now passed Python Syntax (Simple Statements). You can now proceed to Indentations (Simple Statements). Kindly log in your account to proceed. You need to please check your e-mail in the e-mail address or text in the mobile phone number you registered. Thank you.",
+                              icon: "success"
+                            });
+                            //window.alert("Registered. You have now passed Python Syntax (Simple Statements). You can now proceed to Indentations (Simple Statements). Kindly log in your account to proceed. You need to please check your e-mail in the e-mail address or text in the mobile phone number you registered. Thank you.");
+                            localStorage.removeItem("result");
+                            $("#firstname").val("");
+                            $("#lastname").val("");
+                            $("#email").val("");
+                            $("#phone").val("");
+                            $("#username_reg").val("");
+                            $("#password_reg").val("");
+                            //$("#role").val("");
+                            $("#confirm_pass").val("");
+                            //$("#role").val("");
+                            $('#agree').prop('checked', false);
+                            $("#agree:checked").val("1");
+                            $("#fvAns").val("");
+                            document.getElementById("image").src = "";
+                          }
+                        }); 
+                      }
+                    } else {
+                      swal({
+                        text: "Registered. You need to please check your e-mail in the e-mail address or text in the mobile phone number you registered. Thank you.",
+                        icon: "success"
+                      });
+                      //window.alert("Registered. You need to please check your e-mail in the e-mail address or text in the mobile phone number you registered. Thank you.");
+                      $("#firstname").val("");
+                      $("#lastname").val("");
+                      $("#email").val("");
+                      $("#phone").val("");
+                      $("#username_reg").val("");
+                      $("#password_reg").val("");
+                      //$("#role").val("");
+                      $("#confirm_pass").val("");
+                      $('#agree').prop('checked', false);
+                      $("#agree:checked").val("1");
+                      $("#fvAns").val("");
+                      document.getElementById("image").src = "";
+                    }
+                  } else if (role == "Expert (Pending)") {
+                    $("#pictureModal").modal("open");
+                    localStorage.setItem("imageid",data.id);
+                  }
+                } else {
+                  swal({
+                    text: "Something went wrong. Please try again.",
+                    icon: "error"
+                  });
+                  //window.alert("Something went wrong. Please try again.");
+                }
+              });
+              } else {
+                swal({
+                    text: "Mobile phone numbers shall start with 09 and only have 11 numerical digits.",
+                    icon: "error"
+                });
+                //window.alert("Mobile phone numbers shall start with 09 and only have 11 numerical digits.");
+              }
+            } else {
+              $.post("https://pythomy-staging.000webhostapp.com/_pythomy/insert.php",JSON.stringify({fld_lastname:titleCase(lastname),fld_firstname:titleCase(firstname),fld_email:email,fld_role:role,fld_phone:phone,fld_username:username,fld_password:password,fld_verifcode:Math.floor(Math.random() * 999999)}),function(data){
+                if (data.status == "Created") {
+                  if (role == "Novice") {
+                    if (localStorage.getItem("result")) {
+                      if (localStorage.getItem("result") == "OK") {
+                        correct = JSON.stringify({
+                          cid:data.id,
+                          lid:1
+                        });
+                        $.post("https://pythomy-staging.000webhostapp.com/_pythomy/check.php",correct,function(data){
+                          if (data.status == "OK") {
+                            swal({
+                              text: "Registered. You have now passed Python Syntax (Simple Statements). You can now proceed to Indentations (Simple Statements). Kindly log in your account to proceed. You need to please check your e-mail in the e-mail address or text in the mobile phone number you registered. Thank you.",
+                              icon: "success"
+                            });
+                            //window.alert("Registered. You have now passed Python Syntax (Simple Statements). You can now proceed to Indentations (Simple Statements). Kindly log in your account to proceed. You need to please check your e-mail in the e-mail address or text in the mobile phone number you registered. Thank you.");
+                            localStorage.removeItem("result");
+                            $("#firstname").val("");
+                            $("#lastname").val("");
+                            $("#email").val("");
+                            $("#phone").val("");
+                            $("#username_reg").val("");
+                            $("#password_reg").val("");
+                            //$("#role").val("");
+                            $("#confirm_pass").val("");
+                            //$("#role").val("");
+                            $('#agree').prop('checked', false);
+                            $("#agree:checked").val("1");
+                            $("#fvAns").val("");
+                            document.getElementById("image").src = "";
+                          }
+                        }); 
+                      }
+                    } else {
+                      swal({
+                        text: "Registered. You need to please check your e-mail in the e-mail address or text in the mobile phone number you registered. Thank you.",
+                        icon: "success"
+                      });
+                      //window.alert("Registered. You need to please check your e-mail in the e-mail address or text in the mobile phone number you registered. Thank you.");
+                      $("#firstname").val("");
+                      $("#lastname").val("");
+                      $("#email").val("");
+                      $("#phone").val("");
+                      $("#username_reg").val("");
+                      $("#password_reg").val("");
+                      //$("#role").val("");
+                      $("#confirm_pass").val("");
+                      $('#agree').prop('checked', false);
+                      $("#agree:checked").val("1");
+                      $("#fvAns").val("");
+                      document.getElementById("image").src = "";
+                    }
+                  } else if (role == "Expert (Pending)") {
+                    $("#pictureModal").modal("open");
+                    localStorage.setItem("imageid",data.id);
+                  }
+                } else {
+                  swal({
+                    text: "Something went wrong. Please try again.",
+                    icon: "error"
+                  });
+                  //window.alert("Something went wrong. Please try again.");
+                }
+              });
+            }
+              
+              
+            } else {
+              if (password != confirm_pass) {
+                swal({
+                  text: "Passwords should match. Thank you.",
+                  icon: "error"
+                });
+                //window.alert("Passwords should match. Thank you.");
+              }
+              if (agree != "1") {
+                swal({
+                  text: "Please fill up ALL REQUIRED (*) fields. Thank you.",
+                  icon: "error"
+                });
+                //window.alert("Please fill up ALL REQUIRED (*) fields. Thank you.");
+              }
+              if (!validateEmail(email)) {
+                swal({
+                  text: "Please enter a valid e-mail address. Thank you.",
+                  icon: "error"
+                });
+                //window.alert("Please enter a valid e-mail address. Thank you.");
+              }
+              if ((firstname.match(/[^A-Z]/gi) || firstname.match(/[^a-z]/gi)) || (firstname.match(/[^A-Z]/gi) || firstname.match(/[^a-z]/gi)) || firstname.match(/[0-9]/g) || lastname.match(/[0-9]/g) || firstname.match(/[!$%^&*()_+|~=`{}\[\]:";<>?\/@]/g) || lastname.match(/[!$%^&*()_+|~=`{}\[\]:";<>?\/@]/g)) {
+                swal({
+                  text: "First Name and Last Name should only contain alphabets (most important) and/or these symbols (- ' , .). Thank you.",
+                  icon: "error"
+                });
+                  //window.alert("First Name and Last Name should only contain alphabets (most important) and/or these symbols (- ' , .). Thank you.");
+              }
+              if (phone.match(/[^0-9]/g) || phone.length != 11 || !phone.startsWith("09")) {
+                swal({
+                  text: "Mobile phone numbers shall start with 09 and only have 11 numerical digits.",
+                  icon: "error"
+                });
+                //window.alert("Mobile phone numbers shall start with 09 and only have 11 numerical digits.");
+              }
+            }
+          } else {
+            if (data.username == username) {
+              swal({
+                text: "Sorry! This user already exists.",
+                icon: "error"
+              });
+              //window.alert("Sorry! This user already exists.");
+            }
+            if (data.email == email) {
+              swal({
+                text: "Sorry! This e-mail address has already been used.",
+                icon: "error"
+              });
+              //window.alert("Sorry! This e-mail address has already been used.");
+            }
+          }
+        });
+      } else {
+        swal({
+          text: "Please fill up ALL REQUIRED (*) fields. Thank you.",
+          icon: "error"
+        });
+        //window.alert("Please fill up ALL REQUIRED (*) fields. Thank you.");
+      }
+    }
+  </script>
+  </body>
+</html>

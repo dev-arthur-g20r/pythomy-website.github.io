@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+        <title>PythoMy Login Page</title>
+  <link href="fonts/material_icons/material-icons.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+</head>
+
+<body>
+  <div class="section"></div>
+  <main>
+    <center>
+      <div class="section"></div>
+ 
+      <div class="container">
+        <div class="row">
+        <div class="z-depth-1 white lighten-4  col s12 m6 l6 offset-l3" style="border-radius: 12px; margin-top: 50px;">
+          <div class="row" id="mainform">
+            <div class='row'>
+              <div class='col s12'>
+              </div>
+            </div>
+
+              <img class="responsive-img" style="width: 100px;" src="images/PythoMy Logo.png" />
+
+              <h6 style="color:#666666;">Please login into your user/expert site.</h6>
+
+              <div class='input-field col s10 offset-s1'>
+                <i class="material-icons prefix">account_box</i>
+                <input class='validate' type='text' name='username' required id='username' />
+                <label for='username'>Enter your username</label>
+              </div>
+              <div class='input-field col s10 offset-s1'>
+                <i class="material-icons prefix">lock</i>
+                <input class='validate' type='password' name='password' required id='password' />
+                <label for='password'>Enter your password</label>
+              </div>
+              <div class='row col s6 offset-s3'>
+            <center>
+                <button  id="btn-login" name='btn-login' class='col s12 btn btn-large waves-effect darken-3' style="background-color: #0fbcf9!important;" onclick="logIn()">Log In</button>
+            </center>
+              </div>
+          </div>
+        </div>
+        </div>
+      </div>
+      
+    </center>
+  </main>
+
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript">
+    function logIn(){
+      $(function(){
+        var username = $('#username').val();
+        var password = $('#password').val();
+        if (username != "" || password != "") {
+          vUrl = "https://www.gcccsbsit.xyz/_pythomy/login.php";
+          $.post(vUrl,JSON.stringify({username:username,password:password}),function(data){
+            if (Array.isArray(data)) {
+              if (data[0]["fld_username"] == username && data[0]["fld_password"] == password){
+                sessionStorage.setItem("username",data[0]["fld_username"]);
+                sessionStorage.setItem("id",data[0]["fld_id"]);
+                sessionStorage.setItem("name",data[0]["fld_firstname"] + " " + data[0]["fld_lastname"]);
+                window.location.href = 'simplestatements.html';
+              }  
+            } else {
+              if (data.status == "OK") {
+                window.alert("Invalid username or password. Please try again.")
+              }
+            }
+          });  
+        } else {
+          window.alert("Please fill out all fields. Thank you.");
+        }
+        
+      });
+    }
+  </script>
+</body>
+
+</html>
